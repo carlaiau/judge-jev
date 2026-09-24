@@ -1,0 +1,27 @@
+---
+import ResultsPage from '../components/ResultsPage'
+import '../styles/global.css'
+
+const title = 'Judge Jev — LLMJudge results'
+const description = 'A retrospective evaluation of Jev’s Choice, Score, and Noul primitives as passage relevance judges on LLMJudge.'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <ResultsPage />
+  </body>
+</html>

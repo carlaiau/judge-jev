@@ -8,31 +8,18 @@ The first experiment compares Jev with human labels and released LLMJudge submis
 
 **This is not a blind challenge submission.** The test labels and benchmark results were public before this experiment. We expect Jev to have seen the public LLMJudge results during training, although we cannot verify its training data. Treat these scores as a retrospective comparison that may reflect benchmark exposure, not evidence of performance on unseen test data.
 
-### Results against the paper's best judges
+### Results website
 
-All Jev numbers below are from the full test set in [the experiment report](results/report.md). The comparison row gives the **best submission in each column** of the [LLMJudge paper](https://arxiv.org/pdf/2502.13908) (Tables 3 and 4); it does not describe one judge. Higher values mean better agreement with human labels or system ordering.
+The static website in [`site/`](site/) is the main presentation of the LLMJudge results, including Jev variants alongside the paper's best submissions, methodological limits, and downloadable raw responses. The complete numeric record remains in [the report](results/report.md).
 
-| Judge | Four-grade κ | κ: 0 \| 1–3 | κ: 0–1 \| 2–3 | κ: 0–2 \| 3 |
-| --- | ---: | ---: | ---: | ---: |
-| Jev Choice, native | 0.2617 | 0.3798 | 0.4180 | 0.3308 |
-| Jev Score, native | 0.2249 | 0.3367 | 0.4059 | 0.3099 |
-| Jev Score, calibrated | 0.2118 | 0.3592 | 0.3656 | 0.2907 |
-| Jev Noul, native | 0.2589 | 0.4149 | 0.3981 | 0.3103 |
-| Jev Noul, calibrated | 0.2451 | 0.3847 | 0.3402 | 0.3103 |
-| **Paper best, per column** | **0.2863** | **0.4228** | **0.4280** | **0.3215** |
+Its structure follows the widely used [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) convention for research pages. The implementation is original Astro/Tailwind code with selected components from the locally available, licensed [Tailwind Catalyst UI kit](https://catalyst.tailwindui.com/docs). No source code from the academic template was copied.
 
-The paper's winners are `willia-umbrela1` for four-grade κ, `Olz-gpt4o` for 0 \| 1–3, `h2oloo-fewself` for the primary answer-bearing split 0–1 \| 2–3, and `willia-umbrela3` for 0–2 \| 3. Jev Choice exceeds the paper's best 0–2 \| 3 value (0.3308 versus 0.3215), while its four-grade and primary answer-bearing κ remain below the paper's best values. Our recomputed κ for selected released submissions matches the paper to four decimals.
+```sh
+npm run site:dev      # local preview
+npm run site:build    # static output in site/dist
+```
 
-| Judge | Kendall τ | Spearman ρ |
-| --- | ---: | ---: |
-| Jev Choice, native | 0.9284 | 0.9891 |
-| Jev Score, native | 0.9351 | 0.9915 |
-| Jev Score, calibrated | 0.9024 | 0.9835 |
-| Jev Noul, native | 0.9428 | 0.9922 |
-| Jev Noul, calibrated | 0.9226 | 0.9874 |
-| **Paper best, per column** | **0.9516** | **0.9919** |
-
-The paper's system-order winners are `prophet-setting2` for τ and `TREMA-4prompts` for ρ. Our τ and ρ use `trec_eval` nDCG@10 over 35 released passage runs and the 25 test queries. The same calculation does **not** reproduce the paper's published ranking correlations for released submissions, so the Jev and paper rows are indicative side-by-side values, not directly comparable scores. We omit Krippendorff's α from this comparison because our nominal α does not reproduce the paper's α convention. Full per-judge results, grade distributions, confusion matrices, and query-cluster bootstrap intervals are in [the report](results/report.md).
+The site renders values directly from `results/report.json`. The build copies the report, raw Jev responses, calibration, and source manifest into downloadable static files. Netlify uses [`netlify.toml`](netlify.toml) to run `npm run site:build` and publish `site/dist`; no API key or live inference is needed to build it. Future experiments can have their own pages under `site/src/pages/`.
 
 ### Setup
 

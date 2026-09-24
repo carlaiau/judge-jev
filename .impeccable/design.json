@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T10:37:03Z",
+  "title": "Design System: Judge Jev",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f7f6f2",
+        "tonalRamp": [
+          "oklch(15% 0.005 95.1)",
+          "oklch(25% 0.005 95.1)",
+          "oklch(35% 0.005 95.1)",
+          "oklch(45% 0.005 95.1)",
+          "oklch(55% 0.005 95.1)",
+          "oklch(65% 0.005 95.1)",
+          "oklch(80% 0.005 95.1)",
+          "oklch(95% 0.005 95.1)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Warm Surface",
+        "canonical": "#fffefa",
+        "tonalRamp": [
+          "oklch(15% 0.005 95.1)",
+          "oklch(25% 0.005 95.1)",
+          "oklch(35% 0.005 95.1)",
+          "oklch(45% 0.005 95.1)",
+          "oklch(55% 0.005 95.1)",
+          "oklch(65% 0.005 95.1)",
+          "oklch(80% 0.005 95.1)",
+          "oklch(95% 0.005 95.1)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Blue-Green Ink",
+        "canonical": "#193238",
+        "tonalRamp": [
+          "oklch(15% 0.033 215.0)",
+          "oklch(25% 0.033 215.0)",
+          "oklch(35% 0.033 215.0)",
+          "oklch(45% 0.033 215.0)",
+          "oklch(55% 0.033 215.0)",
+          "oklch(65% 0.033 215.0)",
+          "oklch(80% 0.033 215.0)",
+          "oklch(95% 0.033 215.0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Blue-Green",
+        "canonical": "#52686c",
+        "tonalRamp": [
+          "oklch(15% 0.027 209.9)",
+          "oklch(25% 0.027 209.9)",
+          "oklch(35% 0.027 209.9)",
+          "oklch(45% 0.027 209.9)",
+          "oklch(55% 0.027 209.9)",
+          "oklch(65% 0.027 209.9)",
+          "oklch(80% 0.027 209.9)",
+          "oklch(95% 0.027 209.9)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Fine Rule",
+        "canonical": "#d3dbd7",
+        "tonalRamp": [
+          "oklch(15% 0.010 164.8)",
+          "oklch(25% 0.010 164.8)",
+          "oklch(35% 0.010 164.8)",
+          "oklch(45% 0.010 164.8)",
+          "oklch(55% 0.010 164.8)",
+          "oklch(65% 0.010 164.8)",
+          "oklch(80% 0.010 164.8)",
+          "oklch(95% 0.010 164.8)"
+        ]
+      },
+      "teal": {
+        "role": "primary",
+        "displayName": "Research Teal",
+        "canonical": "#126c61",
+        "tonalRamp": [
+          "oklch(15% 0.081 182.3)",
+          "oklch(25% 0.081 182.3)",
+          "oklch(35% 0.081 182.3)",
+          "oklch(45% 0.081 182.3)",
+          "oklch(55% 0.081 182.3)",
+          "oklch(65% 0.081 182.3)",
+          "oklch(80% 0.081 182.3)",
+          "oklch(95% 0.081 182.3)"
+        ]
+      },
+      "teal-dark": {
+        "role": "primary",
+        "displayName": "Deep Research Teal",
+        "canonical": "#0e5049",
+        "tonalRamp": [
+          "oklch(15% 0.064 184.2)",
+          "oklch(25% 0.064 184.2)",
+          "oklch(35% 0.064 184.2)",
+          "oklch(45% 0.064 184.2)",
+          "oklch(55% 0.064 184.2)",
+          "oklch(65% 0.064 184.2)",
+          "oklch(80% 0.064 184.2)",
+          "oklch(95% 0.064 184.2)"
+        ]
+      },
+      "sand": {
+        "role": "secondary",
+        "displayName": "Study Sand",
+        "canonical": "#f2eadb",
+        "tonalRamp": [
+          "oklch(15% 0.022 83.3)",
+          "oklch(25% 0.022 83.3)",
+          "oklch(35% 0.022 83.3)",
+          "oklch(45% 0.022 83.3)",
+          "oklch(55% 0.022 83.3)",
+          "oklch(65% 0.022 83.3)",
+          "oklch(80% 0.022 83.3)",
+          "oklch(95% 0.022 83.3)"
+        ]
+      },
+      "sand-ink": {
+        "role": "secondary",
+        "displayName": "Sand Ink",
+        "canonical": "#694d28",
+        "tonalRamp": [
+          "oklch(15% 0.065 72.5)",
+          "oklch(25% 0.065 72.5)",
+          "oklch(35% 0.065 72.5)",
+          "oklch(45% 0.065 72.5)",
+          "oklch(55% 0.065 72.5)",
+          "oklch(65% 0.065 72.5)",
+          "oklch(80% 0.065 72.5)",
+          "oklch(95% 0.065 72.5)"
+        ]
+      },
+      "action-teal": {
+        "role": "primary",
+        "displayName": "Action Teal",
+        "canonical": "oklch(60% 0.118 184.704)",
+        "tonalRamp": [
+          "oklch(15% 0.118 184.7)",
+          "oklch(25% 0.118 184.7)",
+          "oklch(35% 0.118 184.7)",
+          "oklch(45% 0.118 184.7)",
+          "oklch(55% 0.118 184.7)",
+          "oklch(65% 0.118 184.7)",
+          "oklch(80% 0.118 184.7)",
+          "oklch(95% 0.118 184.7)"
+        ]
+      },
+      "action-teal-border": {
+        "role": "primary",
+        "displayName": "Action Teal Border",
+        "canonical": "oklch(51.1% 0.096 186.391)",
+        "tonalRamp": [
+          "oklch(15% 0.096 186.4)",
+          "oklch(25% 0.096 186.4)",
+          "oklch(35% 0.096 186.4)",
+          "oklch(45% 0.096 186.4)",
+          "oklch(55% 0.096 186.4)",
+          "oklch(65% 0.096 186.4)",
+          "oklch(80% 0.096 186.4)",
+          "oklch(95% 0.096 186.4)"
+        ]
+      },
+      "button-light": {
+        "role": "neutral",
+        "displayName": "Button Light",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(65% 0.000 89.9)",
+          "oklch(80% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "canonical": "oklch(14.1% 0.005 285.823)",
+        "tonalRamp": [
+          "oklch(15% 0.005 285.8)",
+          "oklch(25% 0.005 285.8)",
+          "oklch(35% 0.005 285.8)",
+          "oklch(45% 0.005 285.8)",
+          "oklch(55% 0.005 285.8)",
+          "oklch(65% 0.005 285.8)",
+          "oklch(80% 0.005 285.8)",
+          "oklch(95% 0.005 285.8)"
+        ]
+      },
+      "inverse-text": {
+        "role": "neutral",
+        "displayName": "Inverse Text",
+        "canonical": "#f6fbf8",
+        "tonalRamp": [
+          "oklch(15% 0.007 160.1)",
+          "oklch(25% 0.007 160.1)",
+          "oklch(35% 0.007 160.1)",
+          "oklch(45% 0.007 160.1)",
+          "oklch(55% 0.007 160.1)",
+          "oklch(65% 0.007 160.1)",
+          "oklch(80% 0.007 160.1)",
+          "oklch(95% 0.007 160.1)"
+        ]
+      },
+      "inverse-muted": {
+        "role": "neutral",
+        "displayName": "Inverse Muted",
+        "canonical": "#b9cdca",
+        "tonalRamp": [
+          "oklch(15% 0.022 185.9)",
+          "oklch(25% 0.022 185.9)",
+          "oklch(35% 0.022 185.9)",
+          "oklch(45% 0.022 185.9)",
+          "oklch(55% 0.022 185.9)",
+          "oklch(65% 0.022 185.9)",
+          "oklch(80% 0.022 185.9)",
+          "oklch(95% 0.022 185.9)"
+        ]
+      },
+      "inverse-rule": {
+        "role": "neutral",
+        "displayName": "Inverse Rule",
+        "canonical": "#52706e",
+        "tonalRamp": [
+          "oklch(15% 0.035 191.0)",
+          "oklch(25% 0.035 191.0)",
+          "oklch(35% 0.035 191.0)",
+          "oklch(45% 0.035 191.0)",
+          "oklch(55% 0.035 191.0)",
+          "oklch(65% 0.035 191.0)",
+          "oklch(80% 0.035 191.0)",
+          "oklch(95% 0.035 191.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero question only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Table and method subheadings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory reading text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small uppercase metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-low",
+        "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "purpose": "Catalyst solid button foreground only; evidence panels remain flat."
+      }
+    ],
+    "motion": [
+      {
+        "name": "hero-enter",
+        "value": ".65s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Subtle one-time hero reveal, removed by prefers-reduced-motion."
+      },
+      {
+        "name": "navigation-hover",
+        "value": ".18s ease",
+        "purpose": "Header link color change."
+      },
+      {
+        "name": "resource-hover",
+        "value": ".2s ease",
+        "purpose": "Resource link color and left inset change."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "catalyst-sm",
+        "value": "640px"
+      },
+      {
+        "name": "single-column",
+        "value": "700px"
+      },
+      {
+        "name": "hero-system-stack",
+        "value": "900px"
+      },
+      {
+        "name": "narrow-phone",
+        "value": "390px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Teal Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The solid Catalyst action used to explore results and download the report.",
+      "html": "<button class=\"ds-btn-primary\">Explore the results</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; background:oklch(60% 0.118 184.704); color:#fff; border:1px solid oklch(51.1% 0.096 186.391); border-radius:8px; padding:9px 13px; font:600 16px/24px \"Inter Variable\",Inter,sans-serif; box-shadow:0 1px 3px 0 rgb(0 0 0 / .1),0 1px 2px -1px rgb(0 0 0 / .1),inset 0 1px rgb(255 255 255 / .15); cursor:pointer; transition:filter .18s ease; } .ds-btn-primary:hover { filter:brightness(1.08); } .ds-btn-primary:active { filter:brightness(.96); } .ds-btn-primary:focus-visible { outline:2px solid #126c61; outline-offset:3px; } @media (min-width:640px) { .ds-btn-primary { padding:5px 11px; font-size:14px; } }"
+    },
+    {
+      "name": "Light Resource Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "The white Catalyst action on the inverse resources section.",
+      "html": "<button class=\"ds-btn-light\">Browse the code ↗</button>",
+      "css": ".ds-btn-light { display:inline-flex; align-items:center; justify-content:center; background:#fff; color:oklch(14.1% 0.005 285.823); border:1px solid rgb(9 9 11 / .1); border-radius:8px; padding:9px 13px; font:600 16px/24px \"Inter Variable\",Inter,sans-serif; box-shadow:0 1px 3px 0 rgb(0 0 0 / .1),0 1px 2px -1px rgb(0 0 0 / .1),inset 0 1px rgb(255 255 255 / .15); cursor:pointer; transition:background .18s ease; } .ds-btn-light:hover { background:#f5f5f4; } .ds-btn-light:active { background:#e9eeea; } .ds-btn-light:focus-visible { outline:2px solid #126c61; outline-offset:3px; } @media (min-width:640px) { .ds-btn-light { padding:5px 11px; font-size:14px; } }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "description": "The secondary paper link in the light hero.",
+      "html": "<button class=\"ds-btn-outline\">Read the benchmark paper ↗</button>",
+      "css": ".ds-btn-outline { display:inline-flex; align-items:center; justify-content:center; background:transparent; color:oklch(14.1% 0.005 285.823); border:1px solid rgb(9 9 11 / .1); border-radius:8px; padding:9px 13px; font:600 16px/24px \"Inter Variable\",Inter,sans-serif; cursor:pointer; transition:background .18s ease; } .ds-btn-outline:hover,.ds-btn-outline:active { background:rgb(9 9 11 / .025); } .ds-btn-outline:focus-visible { outline:2px solid #126c61; outline-offset:3px; } @media (min-width:640px) { .ds-btn-outline { padding:5px 11px; font-size:14px; } }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Compact wordmark and section links on the paper ground.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\">J<span>.</span></span><strong>Judge Jev</strong><a href=\"#\">Findings</a><a href=\"#\">Method</a><a href=\"#\">Resources</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:24px; color:#193238; font:620 13px/1.4 \"Inter Variable\",Inter,sans-serif; } .ds-nav strong { margin-right:20px; font-size:15px; letter-spacing:-.035em; white-space:nowrap; } .ds-nav-mark { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; margin-right:-13px; border-radius:7px; background:#193238; color:#fffefa; font:480 23px/1 \"Newsreader Variable\",Georgia,serif; } .ds-nav-mark span { color:#87c9ac; } .ds-nav a { color:#52686c; text-decoration:none; transition:color .18s ease; } .ds-nav a:hover { color:#0e5049; } .ds-nav a:focus-visible { outline:2px solid #126c61; outline-offset:3px; } @media (max-width:700px) { .ds-nav { gap:13px; font-size:11.5px; } .ds-nav strong { margin-right:0; } }"
+    },
+    {
+      "name": "Study Limitation Note",
+      "kind": "custom",
+      "refersTo": "study-note",
+      "description": "Warm sand caution note with an amber Catalyst badge.",
+      "html": "<aside class=\"ds-study-note\"><span class=\"ds-study-badge\">Study limitation</span><p><strong>This is not a blind challenge submission.</strong> Public benchmark results may have been seen during training.</p></aside>",
+      "css": ".ds-study-note { display:grid; grid-template-columns:170px 1fr; gap:16px; align-items:start; padding:21px 23px; background:#f2eadb; color:#694d28; border-radius:12px; font:400 14px/1.72 \"Inter Variable\",Inter,sans-serif; } .ds-study-note p { margin:0; max-width:90ch; } .ds-study-note strong { color:#553b1c; } .ds-study-badge { justify-self:start; background:oklch(82.8% 0.189 84.429 / .2); color:oklch(55.5% 0.163 48.998); border-radius:6px; padding:2px 6px; font:500 12px/20px \"Inter Variable\",Inter,sans-serif; } @media (max-width:700px) { .ds-study-note { grid-template-columns:1fr; gap:10px; } }"
+    },
+    {
+      "name": "Agreement Chart Card",
+      "kind": "card",
+      "refersTo": "chart-card",
+      "description": "Flat evidence panel with Jev and published-best bars on the same scale.",
+      "html": "<section class=\"ds-chart\"><strong>Four-grade agreement</strong><small>Cohen’s κ against human grades 0–3</small><div class=\"ds-chart-row\"><span>Choice</span><i class=\"ds-chart-track\"><b class=\"ds-chart-jev\"></b></i><em>0.2617</em></div><div class=\"ds-chart-row\"><span>Paper best</span><i class=\"ds-chart-track\"><b class=\"ds-chart-paper\"></b></i><em>0.2863</em></div></section>",
+      "css": ".ds-chart { display:grid; gap:12px; padding:28px 29px 26px; background:#fffefa; color:#193238; border:1px solid #d3dbd7; border-radius:13px; font-family:\"Inter Variable\",Inter,sans-serif; } .ds-chart strong { font-size:16px; font-weight:730; letter-spacing:-.02em; } .ds-chart small { margin-top:-9px; margin-bottom:10px; color:#52686c; font-size:13px; } .ds-chart-row { display:grid; grid-template-columns:84px minmax(0,1fr) 54px; gap:13px; align-items:center; font-size:13px; font-weight:620; } .ds-chart-row em { font-style:normal; font-variant-numeric:tabular-nums; font-weight:700; text-align:right; } .ds-chart-track { display:block; height:15px; overflow:hidden; border-radius:3px; background:#e9eeea; } .ds-chart-track b { display:block; height:100%; border-radius:3px; } .ds-chart-jev { width:52.34%; background:#126c61; } .ds-chart-paper { width:57.26%; background:#9aa9a1; }"
+    },
+    {
+      "name": "Results Table",
+      "kind": "custom",
+      "description": "Dense numeric table with a featured Jev row and deep-teal primary measure.",
+      "html": "<div class=\"ds-table-frame\"><table class=\"ds-table\"><thead><tr><th>Judge</th><th>Four grades</th><th>0–1 | 2–3</th></tr></thead><tbody><tr class=\"ds-featured\"><td>Jev Choice <small>Native</small></td><td>0.2617</td><td class=\"ds-primary\">0.4180</td></tr><tr class=\"ds-benchmark\"><td>Paper best</td><td>0.2863</td><td class=\"ds-primary\">0.4280</td></tr></tbody></table></div>",
+      "css": ".ds-table-frame { overflow-x:auto; padding:7px 18px; background:#fffefa; border:1px solid #d3dbd7; border-radius:12px; } .ds-table { width:100%; min-width:440px; border-collapse:collapse; color:#193238; font:400 13px/1.5 \"Inter Variable\",Inter,sans-serif; font-variant-numeric:tabular-nums; } .ds-table th,.ds-table td { padding:10px 12px; border-bottom:1px solid rgb(9 9 11 / .05); white-space:nowrap; } .ds-table th { color:#52686c; font-size:12px; font-weight:680; } .ds-table th:first-child,.ds-table td:first-child { text-align:left; } .ds-table th:not(:first-child),.ds-table td:not(:first-child) { text-align:right; } .ds-table small { margin-left:8px; color:#52686c; font-size:11.5px; } .ds-featured { background:#edf5f0; } .ds-benchmark { background:#f0f1ec; font-weight:720; } .ds-table .ds-primary { color:#0e5049; font-weight:760; }"
+    },
+    {
+      "name": "Resource Link Row",
+      "kind": "custom",
+      "description": "Divided source link on the dark resources ground.",
+      "html": "<div class=\"ds-resource-list\"><a class=\"ds-resource-row\" href=\"#\"><span>Raw Jev test responses</span><small>JSONL ↓</small></a></div>",
+      "css": ".ds-resource-list { background:#193238; border-top:1px solid #52706e; border-bottom:1px solid #52706e; font-family:\"Inter Variable\",Inter,sans-serif; } .ds-resource-row { display:flex; justify-content:space-between; gap:16px; padding:17px 1px; color:#f6fbf8; text-decoration:none; font-size:14px; transition:color .2s ease,padding .2s ease; } .ds-resource-row small { color:#9cbcb7; white-space:nowrap; font-size:12px; } .ds-resource-row:hover { color:#9fdec4; padding-left:7px; } .ds-resource-row:focus-visible { outline:2px solid #9fdec4; outline-offset:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Research Field Note",
+    "overview": "Judge Jev presents evidence with the calm of an academic project page. A warm paper ground, blue-green ink, and generous white space make the reading path clear. Newsreader gives findings and section headings an editorial voice; Inter keeps methods, chart labels, and dense numeric tables precise.\n\nThe page reserves stronger color for decisions and meaning: teal marks Jev results and actions, muted gray identifies published comparators, and a sand note keeps the study limitation adjacent to the findings. Data remains legible without ornamental graphics. The dark resources section closes the page with a clear shift from interpretation to source material.",
+    "keyCharacteristics": [
+      "Serif conclusions above restrained sans-serif evidence.",
+      "Thin rules, gentle corners, and tonal surfaces instead of heavy containers.",
+      "Teal for Jev and actions; neutral bars for paper benchmarks.",
+      "Generous desktop spacing that collapses into a compact single column on phones."
+    ],
+    "rules": [
+      {
+        "name": "The Meaningful Teal Rule",
+        "body": "Use teal to identify Jev measures, primary actions, and selected values; keep the paper benchmark in a separate gray treatment.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numeral Rule",
+        "body": "Use tabular numerals for metrics and counts so rows and comparisons scan vertically.",
+        "section": "typography"
+      },
+      {
+        "name": "The Evidence Pair Rule",
+        "body": "When two metrics invite comparison, give them equal-width panels and shared scale; place the explanatory caption directly after them.",
+        "section": "layout"
+      },
+      {
+        "name": "The Quiet Border Rule",
+        "body": "Use borders and tone to group research content; avoid adding heavy ambient shadows to evidence panels.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** pair prominent conclusions with clearly labeled measures and nearby explanatory captions.",
+      "**Do** use warm-surface panels, fine rules, and tabular figures for dense results.",
+      "**Do** keep the dark resource treatment and readable light-on-dark type for source links.",
+      "**Do** preserve a visible focus indicator and the reduced-motion behavior."
+    ],
+    "donts": [
+      "**Don't** color the paper-best comparator like a Jev result.",
+      "**Don't** replace the careful serif/sans hierarchy with one undifferentiated type style.",
+      "**Don't** turn data panels into shadow-heavy or pill-shaped cards.",
+      "**Don't** collapse numeric columns until the comparison is unreadable; let the table scroll."
+    ]
+  }
+}

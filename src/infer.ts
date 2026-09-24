@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, truncateSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
 import { TypeSafeClient } from '@typesafe-ai/sdk';
 import { MODEL, NOUL_NATIVE, QUESTION_HASH, QUESTIONS, type Pair, type Split } from './config.ts';
 import { ROOT, type BenchmarkData } from './data.ts';

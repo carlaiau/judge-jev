@@ -5,3 +5,6 @@ dist/
 data/raw/
 data/cache/
 results/qrels/
+site/dist/
+site/public/downloads/
+.astro/
