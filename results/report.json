@@ -1,0 +1,3665 @@
+{
+  "model": "jev-1.13.0",
+  "questionHash": "223511a5c5fc61351caab8ae01b0091ef16ed90bfc4083371cd501b41ffdde40",
+  "sources": {
+    "llm4eval/LLMJudge": "81159c68260d383f8da1dad8a14f6d914a9054a9",
+    "llm4eval/LLMJudge-benchmark": "0e2024814e3192cfc662ecee56dbd16b2536a7de",
+    "rahmanidashti/SyntheticTestCollections": "bb108f587d08425d8e66108beb663d297039117e"
+  },
+  "developmentPairs": 7263,
+  "testPairs": 4423,
+  "passageRuns": 35,
+  "humanGradeDistribution": [
+    2005,
+    1233,
+    808,
+    377
+  ],
+  "calibration": {
+    "model": "jev-1.13.0",
+    "questionHash": "223511a5c5fc61351caab8ae01b0091ef16ed90bfc4083371cd501b41ffdde40",
+    "objective": "Maximize unweighted four-grade Cohen kappa on development pairs; ties use closest native thresholds, then lexicographic order",
+    "gridStep": 0.05,
+    "devPairs": 7263,
+    "score": [
+      1.4,
+      2.1,
+      2.25
+    ],
+    "noul": [
+      0.8,
+      0.9,
+      0.5
+    ],
+    "devKappa": {
+      "score": 0.2707502952865349,
+      "noul": 0.30233884486986773
+    }
+  },
+  "paperComparison": {
+    "comparable": false,
+    "references": {
+      "Olz-gpt4o": {
+        "paperKappa": 0.2625,
+        "recomputedKappa": 0.2624717058201475,
+        "kappaDelta": -0.00002829417985250604,
+        "paperTau": 0.8793,
+        "recomputedTau": 0.9023569023569024,
+        "tauDelta": 0.023056902356902387,
+        "fullTrecTau": 0.8922558922558923,
+        "fullTrecTauDelta": 0.012955892255892332
+      },
+      "TREMA-4prompts": {
+        "paperKappa": 0.1829,
+        "recomputedKappa": 0.1829442621350349,
+        "kappaDelta": 0.000044262135034889294,
+        "paperTau": 0.9483,
+        "recomputedTau": 0.9528619528619529,
+        "tauDelta": 0.004561952861952823,
+        "fullTrecTau": 0.9225589225589226,
+        "fullTrecTauDelta": -0.025741077441077453
+      },
+      "prophet-setting2": {
+        "paperKappa": 0.1757,
+        "recomputedKappa": 0.1757445897567502,
+        "kappaDelta": 0.000044589756750201825,
+        "paperTau": 0.9516,
+        "recomputedTau": 0.9587892373351626,
+        "tauDelta": 0.007189237335162635,
+        "fullTrecTau": 0.9285116824719469,
+        "fullTrecTauDelta": -0.02308831752805307
+      },
+      "willia-umbrela1": {
+        "paperKappa": 0.2863,
+        "recomputedKappa": 0.2862720172192001,
+        "kappaDelta": -0.00002798278079990668,
+        "paperTau": 0.9009,
+        "recomputedTau": 0.9191919191919192,
+        "tauDelta": 0.018291919191919193,
+        "fullTrecTau": 0.8956228956228957,
+        "fullTrecTauDelta": -0.00527710437710438
+      }
+    }
+  },
+  "methods": {
+    "jev-choice-native": {
+      "labels": {
+        "kappa": 0.261652976148381,
+        "nominalAlpha": 0.25405844985674175,
+        "binaryKappa": {
+          "0|123": 0.37977918018186185,
+          "01|23": 0.4179947258195648,
+          "012|3": 0.33078624318635136
+        },
+        "confusion": [
+          [
+            1027,
+            649,
+            266,
+            63
+          ],
+          [
+            284,
+            554,
+            315,
+            80
+          ],
+          [
+            56,
+            257,
+            366,
+            129
+          ],
+          [
+            5,
+            61,
+            153,
+            158
+          ]
+        ],
+        "gradeDistribution": [
+          1372,
+          1521,
+          1100,
+          430
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.132941442459869,
+        "bootstrap95": {
+          "kappa": [
+            0.17069010421298492,
+            0.3359716830657569
+          ],
+          "binaryAnswerKappa": [
+            0.31940790674403613,
+            0.4995338767382951
+          ]
+        }
+      },
+      "ranking": {
+        "kendallTau": 0.9283912308898904,
+        "spearmanRho": 0.9891433798866113,
+        "fullTrecKendallTau": 0.9115420252476056,
+        "fullTrecSpearmanRho": 0.984100303597712,
+        "bootstrap95": [
+          0.8013468013468014,
+          0.9461279461279462
+        ]
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3685,
+        "WatS-LLM-Rerank": 0.4644,
+        "agg-cocondenser": 0.5702,
+        "bm25_splades": 0.5681,
+        "cip_run_1": 0.7793,
+        "cip_run_2": 0.7793,
+        "cip_run_3": 0.7557,
+        "cip_run_4": 0.7457,
+        "cip_run_5": 0.7328,
+        "cip_run_6": 0.7723,
+        "cip_run_7": 0.7425,
+        "naverloo-frgpt4": 0.7999,
+        "naverloo-rgpt4": 0.799,
+        "naverloo_bm25_RR": 0.6431,
+        "naverloo_bm25_splades_RR": 0.724,
+        "naverloo_fs": 0.607,
+        "naverloo_fs_RR": 0.7457,
+        "naverloo_fs_RR_duo": 0.7992,
+        "slim-pp-0shot-uw": 0.6122,
+        "splade_pp_ensemble_distil": 0.5693,
+        "splade_pp_self_distil": 0.5854,
+        "uogtr_b_grf_e": 0.6143,
+        "uogtr_b_grf_e_gb": 0.6416,
+        "uogtr_be": 0.6107,
+        "uogtr_be_gb": 0.6503,
+        "uogtr_dph": 0.3638,
+        "uogtr_dph_bo1": 0.2996,
+        "uogtr_qr_be": 0.6253,
+        "uogtr_qr_be_gb": 0.6555,
+        "uogtr_s": 0.5716,
+        "uogtr_se": 0.6702,
+        "uogtr_se_gb": 0.6743,
+        "uot-yahoo_LLMs-blender": 0.3575,
+        "uot-yahoo_rankgpt35": 0.3997,
+        "uot-yahoo_rankgpt4": 0.4417
+      }
+    },
+    "jev-score-native": {
+      "labels": {
+        "kappa": 0.22492811143605723,
+        "nominalAlpha": 0.2108720710250025,
+        "binaryKappa": {
+          "0|123": 0.336700459785227,
+          "01|23": 0.4058695934198155,
+          "012|3": 0.30991787953127625
+        },
+        "confusion": [
+          [
+            891,
+            743,
+            318,
+            53
+          ],
+          [
+            235,
+            534,
+            391,
+            73
+          ],
+          [
+            50,
+            240,
+            384,
+            134
+          ],
+          [
+            4,
+            40,
+            188,
+            145
+          ]
+        ],
+        "gradeDistribution": [
+          1180,
+          1557,
+          1281,
+          405
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.2059687994573818,
+        "bootstrap95": {
+          "kappa": [
+            0.13653358487464154,
+            0.2952665509185459
+          ],
+          "binaryAnswerKappa": [
+            0.3043125593221677,
+            0.4858086588443993
+          ]
+        }
+      },
+      "ranking": {
+        "kendallTau": 0.9351309131468043,
+        "spearmanRho": 0.9915248325785915,
+        "fullTrecKendallTau": 0.9115420252476056,
+        "fullTrecSpearmanRho": 0.9843804745026509,
+        "bootstrap95": [
+          0.807996632996633,
+          0.9494949494949495
+        ]
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3895,
+        "WatS-LLM-Rerank": 0.4822,
+        "agg-cocondenser": 0.5921,
+        "bm25_splades": 0.5954,
+        "cip_run_1": 0.792,
+        "cip_run_2": 0.792,
+        "cip_run_3": 0.7711,
+        "cip_run_4": 0.7637,
+        "cip_run_5": 0.7473,
+        "cip_run_6": 0.7872,
+        "cip_run_7": 0.7558,
+        "naverloo-frgpt4": 0.8182,
+        "naverloo-rgpt4": 0.818,
+        "naverloo_bm25_RR": 0.6627,
+        "naverloo_bm25_splades_RR": 0.744,
+        "naverloo_fs": 0.6439,
+        "naverloo_fs_RR": 0.7675,
+        "naverloo_fs_RR_duo": 0.8203,
+        "slim-pp-0shot-uw": 0.636,
+        "splade_pp_ensemble_distil": 0.5954,
+        "splade_pp_self_distil": 0.6071,
+        "uogtr_b_grf_e": 0.6417,
+        "uogtr_b_grf_e_gb": 0.6759,
+        "uogtr_be": 0.6314,
+        "uogtr_be_gb": 0.6778,
+        "uogtr_dph": 0.3808,
+        "uogtr_dph_bo1": 0.3046,
+        "uogtr_qr_be": 0.6581,
+        "uogtr_qr_be_gb": 0.6871,
+        "uogtr_s": 0.5992,
+        "uogtr_se": 0.7021,
+        "uogtr_se_gb": 0.7072,
+        "uot-yahoo_LLMs-blender": 0.368,
+        "uot-yahoo_rankgpt35": 0.4137,
+        "uot-yahoo_rankgpt4": 0.458
+      }
+    },
+    "jev-noul-native": {
+      "labels": {
+        "kappa": 0.2589190864470978,
+        "nominalAlpha": 0.25081873162729373,
+        "binaryKappa": {
+          "0|123": 0.4149400322772,
+          "01|23": 0.39805828044815394,
+          "012|3": 0.31032242750526245
+        },
+        "confusion": [
+          [
+            1177,
+            399,
+            374,
+            55
+          ],
+          [
+            349,
+            375,
+            444,
+            65
+          ],
+          [
+            78,
+            178,
+            409,
+            143
+          ],
+          [
+            6,
+            26,
+            199,
+            146
+          ]
+        ],
+        "gradeDistribution": [
+          1610,
+          978,
+          1426,
+          409
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.1433416233325797,
+        "bootstrap95": {
+          "kappa": [
+            0.1802615813069135,
+            0.3266555563671093
+          ],
+          "binaryAnswerKappa": [
+            0.31045967027475624,
+            0.4707800967225661
+          ]
+        }
+      },
+      "ranking": {
+        "kendallTau": 0.9427609427609428,
+        "spearmanRho": 0.9921557641126209,
+        "fullTrecKendallTau": 0.9191919191919192,
+        "fullTrecSpearmanRho": 0.9857122846337022,
+        "bootstrap95": [
+          0.8147306397306396,
+          0.9528619528619529
+        ]
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3773,
+        "WatS-LLM-Rerank": 0.4758,
+        "agg-cocondenser": 0.5626,
+        "bm25_splades": 0.5839,
+        "cip_run_1": 0.7902,
+        "cip_run_2": 0.7902,
+        "cip_run_3": 0.7623,
+        "cip_run_4": 0.7531,
+        "cip_run_5": 0.7471,
+        "cip_run_6": 0.7737,
+        "cip_run_7": 0.7504,
+        "naverloo-frgpt4": 0.8247,
+        "naverloo-rgpt4": 0.8287,
+        "naverloo_bm25_RR": 0.6542,
+        "naverloo_bm25_splades_RR": 0.7361,
+        "naverloo_fs": 0.6187,
+        "naverloo_fs_RR": 0.7581,
+        "naverloo_fs_RR_duo": 0.8181,
+        "slim-pp-0shot-uw": 0.6233,
+        "splade_pp_ensemble_distil": 0.577,
+        "splade_pp_self_distil": 0.5954,
+        "uogtr_b_grf_e": 0.634,
+        "uogtr_b_grf_e_gb": 0.6597,
+        "uogtr_be": 0.6214,
+        "uogtr_be_gb": 0.6671,
+        "uogtr_dph": 0.372,
+        "uogtr_dph_bo1": 0.31,
+        "uogtr_qr_be": 0.6508,
+        "uogtr_qr_be_gb": 0.6737,
+        "uogtr_s": 0.5798,
+        "uogtr_se": 0.6865,
+        "uogtr_se_gb": 0.6916,
+        "uot-yahoo_LLMs-blender": 0.3574,
+        "uot-yahoo_rankgpt35": 0.4064,
+        "uot-yahoo_rankgpt4": 0.4518
+      }
+    },
+    "jev-score-calibrated": {
+      "labels": {
+        "kappa": 0.2118255345697562,
+        "nominalAlpha": 0.1968702576203345,
+        "binaryKappa": {
+          "0|123": 0.3592490254063436,
+          "01|23": 0.3656103880981884,
+          "012|3": 0.29073954361492244
+        },
+        "confusion": [
+          [
+            1596,
+            260,
+            48,
+            101
+          ],
+          [
+            723,
+            297,
+            69,
+            144
+          ],
+          [
+            275,
+            227,
+            61,
+            245
+          ],
+          [
+            35,
+            116,
+            30,
+            196
+          ]
+        ],
+        "gradeDistribution": [
+          2629,
+          900,
+          208,
+          686
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.7628306579244857,
+        "bootstrap95": {
+          "kappa": [
+            0.12852942325644293,
+            0.29515795497967295
+          ],
+          "binaryAnswerKappa": [
+            0.28763797758318327,
+            0.4441441469141921
+          ]
+        }
+      },
+      "ranking": {
+        "kendallTau": 0.9023569023569024,
+        "spearmanRho": 0.9834710743801653,
+        "fullTrecKendallTau": 0.8855218855218855,
+        "fullTrecSpearmanRho": 0.9787085025913994,
+        "bootstrap95": [
+          0.800605784506072,
+          0.935240027997106
+        ]
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2588,
+        "WatS-LLM-Rerank": 0.389,
+        "agg-cocondenser": 0.5326,
+        "bm25_splades": 0.5148,
+        "cip_run_1": 0.7604,
+        "cip_run_2": 0.7604,
+        "cip_run_3": 0.7248,
+        "cip_run_4": 0.7047,
+        "cip_run_5": 0.6952,
+        "cip_run_6": 0.7443,
+        "cip_run_7": 0.7076,
+        "naverloo-frgpt4": 0.7979,
+        "naverloo-rgpt4": 0.7863,
+        "naverloo_bm25_RR": 0.6223,
+        "naverloo_bm25_splades_RR": 0.7007,
+        "naverloo_fs": 0.5613,
+        "naverloo_fs_RR": 0.7198,
+        "naverloo_fs_RR_duo": 0.7986,
+        "slim-pp-0shot-uw": 0.5509,
+        "splade_pp_ensemble_distil": 0.5087,
+        "splade_pp_self_distil": 0.5138,
+        "uogtr_b_grf_e": 0.5835,
+        "uogtr_b_grf_e_gb": 0.6093,
+        "uogtr_be": 0.5817,
+        "uogtr_be_gb": 0.6085,
+        "uogtr_dph": 0.2744,
+        "uogtr_dph_bo1": 0.192,
+        "uogtr_qr_be": 0.5993,
+        "uogtr_qr_be_gb": 0.6165,
+        "uogtr_s": 0.5101,
+        "uogtr_se": 0.6469,
+        "uogtr_se_gb": 0.6535,
+        "uot-yahoo_LLMs-blender": 0.2654,
+        "uot-yahoo_rankgpt35": 0.3176,
+        "uot-yahoo_rankgpt4": 0.3873
+      }
+    },
+    "jev-noul-calibrated": {
+      "labels": {
+        "kappa": 0.24507114595905935,
+        "nominalAlpha": 0.23677234341038145,
+        "binaryKappa": {
+          "0|123": 0.38472604034086877,
+          "01|23": 0.34018207063828604,
+          "012|3": 0.31032242750526245
+        },
+        "confusion": [
+          [
+            1570,
+            338,
+            42,
+            55
+          ],
+          [
+            642,
+            450,
+            76,
+            65
+          ],
+          [
+            244,
+            320,
+            101,
+            143
+          ],
+          [
+            57,
+            129,
+            45,
+            146
+          ]
+        ],
+        "gradeDistribution": [
+          2513,
+          1237,
+          264,
+          409
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.6764639385032784,
+        "bootstrap95": {
+          "kappa": [
+            0.1420798796819303,
+            0.3397596712113629
+          ],
+          "binaryAnswerKappa": [
+            0.25494189987250016,
+            0.42636683931949837
+          ]
+        }
+      },
+      "ranking": {
+        "kendallTau": 0.9225589225589226,
+        "spearmanRho": 0.9873931923238549,
+        "fullTrecKendallTau": 0.898989898989899,
+        "fullTrecSpearmanRho": 0.982630620535089,
+        "bootstrap95": [
+          0.7946127946127947,
+          0.9393939393939394
+        ]
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3076,
+        "WatS-LLM-Rerank": 0.3987,
+        "agg-cocondenser": 0.4967,
+        "bm25_splades": 0.4965,
+        "cip_run_1": 0.7133,
+        "cip_run_2": 0.7133,
+        "cip_run_3": 0.7017,
+        "cip_run_4": 0.6906,
+        "cip_run_5": 0.6815,
+        "cip_run_6": 0.7019,
+        "cip_run_7": 0.689,
+        "naverloo-frgpt4": 0.7614,
+        "naverloo-rgpt4": 0.7576,
+        "naverloo_bm25_RR": 0.5866,
+        "naverloo_bm25_splades_RR": 0.6631,
+        "naverloo_fs": 0.5304,
+        "naverloo_fs_RR": 0.6856,
+        "naverloo_fs_RR_duo": 0.7606,
+        "slim-pp-0shot-uw": 0.5306,
+        "splade_pp_ensemble_distil": 0.4805,
+        "splade_pp_self_distil": 0.504,
+        "uogtr_b_grf_e": 0.5473,
+        "uogtr_b_grf_e_gb": 0.5576,
+        "uogtr_be": 0.5401,
+        "uogtr_be_gb": 0.5665,
+        "uogtr_dph": 0.2961,
+        "uogtr_dph_bo1": 0.2203,
+        "uogtr_qr_be": 0.5561,
+        "uogtr_qr_be_gb": 0.568,
+        "uogtr_s": 0.4809,
+        "uogtr_se": 0.5968,
+        "uogtr_se_gb": 0.599,
+        "uot-yahoo_LLMs-blender": 0.2972,
+        "uot-yahoo_rankgpt35": 0.3332,
+        "uot-yahoo_rankgpt4": 0.3965
+      }
+    },
+    "NISTRetrieval-instruct0": {
+      "labels": {
+        "kappa": 0.1877205077371582,
+        "nominalAlpha": 0.15975552367542856,
+        "binaryKappa": {
+          "0|123": 0.311559171194851,
+          "01|23": 0.30205604945033426,
+          "012|3": 0
+        },
+        "confusion": [
+          [
+            834,
+            859,
+            312,
+            0
+          ],
+          [
+            226,
+            693,
+            314,
+            0
+          ],
+          [
+            43,
+            397,
+            368,
+            0
+          ],
+          [
+            12,
+            143,
+            222,
+            0
+          ]
+        ],
+        "gradeDistribution": [
+          1115,
+          2092,
+          1216,
+          0
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0228351797422564
+      },
+      "ranking": {
+        "kendallTau": 0.9461279461279462,
+        "spearmanRho": 0.992435915394313,
+        "fullTrecKendallTau": 0.9090909090909091,
+        "fullTrecSpearmanRho": 0.9840313769435495
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4691,
+        "WatS-LLM-Rerank": 0.5676,
+        "agg-cocondenser": 0.622,
+        "bm25_splades": 0.6304,
+        "cip_run_1": 0.7984,
+        "cip_run_2": 0.7984,
+        "cip_run_3": 0.7759,
+        "cip_run_4": 0.7564,
+        "cip_run_5": 0.7715,
+        "cip_run_6": 0.7699,
+        "cip_run_7": 0.7519,
+        "naverloo-frgpt4": 0.834,
+        "naverloo-rgpt4": 0.8495,
+        "naverloo_bm25_RR": 0.6769,
+        "naverloo_bm25_splades_RR": 0.7452,
+        "naverloo_fs": 0.6692,
+        "naverloo_fs_RR": 0.7603,
+        "naverloo_fs_RR_duo": 0.8255,
+        "slim-pp-0shot-uw": 0.6551,
+        "splade_pp_ensemble_distil": 0.6228,
+        "splade_pp_self_distil": 0.6491,
+        "uogtr_b_grf_e": 0.6794,
+        "uogtr_b_grf_e_gb": 0.7054,
+        "uogtr_be": 0.6467,
+        "uogtr_be_gb": 0.7043,
+        "uogtr_dph": 0.4508,
+        "uogtr_dph_bo1": 0.3874,
+        "uogtr_qr_be": 0.686,
+        "uogtr_qr_be_gb": 0.7156,
+        "uogtr_s": 0.6281,
+        "uogtr_se": 0.7215,
+        "uogtr_se_gb": 0.7252,
+        "uot-yahoo_LLMs-blender": 0.4456,
+        "uot-yahoo_rankgpt35": 0.5035,
+        "uot-yahoo_rankgpt4": 0.5198
+      }
+    },
+    "NISTRetrieval-instruct1": {
+      "labels": {
+        "kappa": 0.18739919464686436,
+        "nominalAlpha": 0.159423148487009,
+        "binaryKappa": {
+          "0|123": 0.3106109055904362,
+          "01|23": 0.30205604945033426,
+          "012|3": 0
+        },
+        "confusion": [
+          [
+            833,
+            859,
+            313,
+            0
+          ],
+          [
+            227,
+            693,
+            313,
+            0
+          ],
+          [
+            43,
+            397,
+            368,
+            0
+          ],
+          [
+            12,
+            143,
+            222,
+            0
+          ]
+        ],
+        "gradeDistribution": [
+          1115,
+          2092,
+          1216,
+          0
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0228351797422564
+      },
+      "ranking": {
+        "kendallTau": 0.9494949494949495,
+        "spearmanRho": 0.9929962179576971,
+        "fullTrecKendallTau": 0.9124579124579124,
+        "fullTrecSpearmanRho": 0.9843115282252416
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4691,
+        "WatS-LLM-Rerank": 0.5676,
+        "agg-cocondenser": 0.622,
+        "bm25_splades": 0.6304,
+        "cip_run_1": 0.7984,
+        "cip_run_2": 0.7984,
+        "cip_run_3": 0.7759,
+        "cip_run_4": 0.7564,
+        "cip_run_5": 0.7715,
+        "cip_run_6": 0.7699,
+        "cip_run_7": 0.7519,
+        "naverloo-frgpt4": 0.8326,
+        "naverloo-rgpt4": 0.8481,
+        "naverloo_bm25_RR": 0.6769,
+        "naverloo_bm25_splades_RR": 0.7452,
+        "naverloo_fs": 0.6692,
+        "naverloo_fs_RR": 0.7603,
+        "naverloo_fs_RR_duo": 0.8255,
+        "slim-pp-0shot-uw": 0.6551,
+        "splade_pp_ensemble_distil": 0.6228,
+        "splade_pp_self_distil": 0.6491,
+        "uogtr_b_grf_e": 0.6767,
+        "uogtr_b_grf_e_gb": 0.7054,
+        "uogtr_be": 0.6467,
+        "uogtr_be_gb": 0.7043,
+        "uogtr_dph": 0.4508,
+        "uogtr_dph_bo1": 0.3874,
+        "uogtr_qr_be": 0.686,
+        "uogtr_qr_be_gb": 0.7156,
+        "uogtr_s": 0.6281,
+        "uogtr_se": 0.7215,
+        "uogtr_se_gb": 0.7252,
+        "uot-yahoo_LLMs-blender": 0.4456,
+        "uot-yahoo_rankgpt35": 0.5035,
+        "uot-yahoo_rankgpt4": 0.5198
+      }
+    },
+    "NISTRetrieval-instruct2": {
+      "labels": {
+        "kappa": 0.18800088283824065,
+        "nominalAlpha": 0.1601825742087215,
+        "binaryKappa": {
+          "0|123": 0.31256830530805935,
+          "01|23": 0.30128358888730006,
+          "012|3": 0
+        },
+        "confusion": [
+          [
+            836,
+            855,
+            314,
+            0
+          ],
+          [
+            227,
+            692,
+            314,
+            0
+          ],
+          [
+            42,
+            398,
+            368,
+            0
+          ],
+          [
+            12,
+            143,
+            222,
+            0
+          ]
+        ],
+        "gradeDistribution": [
+          1117,
+          2088,
+          1218,
+          0
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0228351797422564
+      },
+      "ranking": {
+        "kendallTau": 0.9494949494949495,
+        "spearmanRho": 0.9929962179576971,
+        "fullTrecKendallTau": 0.9124579124579124,
+        "fullTrecSpearmanRho": 0.9843115282252416
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4691,
+        "WatS-LLM-Rerank": 0.5676,
+        "agg-cocondenser": 0.622,
+        "bm25_splades": 0.6304,
+        "cip_run_1": 0.7984,
+        "cip_run_2": 0.7984,
+        "cip_run_3": 0.7759,
+        "cip_run_4": 0.7564,
+        "cip_run_5": 0.7715,
+        "cip_run_6": 0.7699,
+        "cip_run_7": 0.7519,
+        "naverloo-frgpt4": 0.834,
+        "naverloo-rgpt4": 0.8495,
+        "naverloo_bm25_RR": 0.6769,
+        "naverloo_bm25_splades_RR": 0.7452,
+        "naverloo_fs": 0.6692,
+        "naverloo_fs_RR": 0.7603,
+        "naverloo_fs_RR_duo": 0.8255,
+        "slim-pp-0shot-uw": 0.6551,
+        "splade_pp_ensemble_distil": 0.6228,
+        "splade_pp_self_distil": 0.6491,
+        "uogtr_b_grf_e": 0.6767,
+        "uogtr_b_grf_e_gb": 0.7054,
+        "uogtr_be": 0.6467,
+        "uogtr_be_gb": 0.7043,
+        "uogtr_dph": 0.4508,
+        "uogtr_dph_bo1": 0.3874,
+        "uogtr_qr_be": 0.686,
+        "uogtr_qr_be_gb": 0.7156,
+        "uogtr_s": 0.6281,
+        "uogtr_se": 0.7215,
+        "uogtr_se_gb": 0.7252,
+        "uot-yahoo_LLMs-blender": 0.4456,
+        "uot-yahoo_rankgpt35": 0.5035,
+        "uot-yahoo_rankgpt4": 0.5198
+      }
+    },
+    "NISTRetrieval-reason0": {
+      "labels": {
+        "kappa": 0.1844333828479293,
+        "nominalAlpha": 0.15993629651078622,
+        "binaryKappa": {
+          "0|123": 0.29112993113565716,
+          "01|23": 0.33901536207441846,
+          "012|3": 0.009663191444516288
+        },
+        "confusion": [
+          [
+            833,
+            847,
+            325,
+            0
+          ],
+          [
+            255,
+            627,
+            351,
+            0
+          ],
+          [
+            52,
+            337,
+            419,
+            0
+          ],
+          [
+            19,
+            111,
+            245,
+            2
+          ]
+        ],
+        "gradeDistribution": [
+          1159,
+          1922,
+          1340,
+          2
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0418268143793805
+      },
+      "ranking": {
+        "kendallTau": 0.9191919191919192,
+        "spearmanRho": 0.9862725871970864,
+        "fullTrecKendallTau": 0.8821548821548821,
+        "fullTrecSpearmanRho": 0.9745062333660176
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4999,
+        "WatS-LLM-Rerank": 0.621,
+        "agg-cocondenser": 0.6576,
+        "bm25_splades": 0.6817,
+        "cip_run_1": 0.8329,
+        "cip_run_2": 0.8329,
+        "cip_run_3": 0.8095,
+        "cip_run_4": 0.7903,
+        "cip_run_5": 0.806,
+        "cip_run_6": 0.8134,
+        "cip_run_7": 0.7901,
+        "naverloo-frgpt4": 0.8641,
+        "naverloo-rgpt4": 0.8829,
+        "naverloo_bm25_RR": 0.727,
+        "naverloo_bm25_splades_RR": 0.7955,
+        "naverloo_fs": 0.7113,
+        "naverloo_fs_RR": 0.8152,
+        "naverloo_fs_RR_duo": 0.855,
+        "slim-pp-0shot-uw": 0.7038,
+        "splade_pp_ensemble_distil": 0.6572,
+        "splade_pp_self_distil": 0.6859,
+        "uogtr_b_grf_e": 0.6933,
+        "uogtr_b_grf_e_gb": 0.7355,
+        "uogtr_be": 0.6795,
+        "uogtr_be_gb": 0.7303,
+        "uogtr_dph": 0.4857,
+        "uogtr_dph_bo1": 0.4081,
+        "uogtr_qr_be": 0.7107,
+        "uogtr_qr_be_gb": 0.7469,
+        "uogtr_s": 0.6612,
+        "uogtr_se": 0.7475,
+        "uogtr_se_gb": 0.7537,
+        "uot-yahoo_LLMs-blender": 0.4802,
+        "uot-yahoo_rankgpt35": 0.5341,
+        "uot-yahoo_rankgpt4": 0.561
+      }
+    },
+    "NISTRetrieval-reason1": {
+      "labels": {
+        "kappa": 0.1844539107676013,
+        "nominalAlpha": 0.15990487685823118,
+        "binaryKappa": {
+          "0|123": 0.2906253754800394,
+          "01|23": 0.3393988838086204,
+          "012|3": 0.009663191444516288
+        },
+        "confusion": [
+          [
+            832,
+            848,
+            325,
+            0
+          ],
+          [
+            255,
+            628,
+            350,
+            0
+          ],
+          [
+            52,
+            337,
+            419,
+            0
+          ],
+          [
+            19,
+            111,
+            245,
+            2
+          ]
+        ],
+        "gradeDistribution": [
+          1158,
+          1924,
+          1339,
+          2
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0418268143793805
+      },
+      "ranking": {
+        "kendallTau": 0.9191919191919192,
+        "spearmanRho": 0.9862725871970864,
+        "fullTrecKendallTau": 0.8821548821548821,
+        "fullTrecSpearmanRho": 0.9745062333660176
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4999,
+        "WatS-LLM-Rerank": 0.621,
+        "agg-cocondenser": 0.6576,
+        "bm25_splades": 0.6798,
+        "cip_run_1": 0.8329,
+        "cip_run_2": 0.8329,
+        "cip_run_3": 0.8095,
+        "cip_run_4": 0.7903,
+        "cip_run_5": 0.806,
+        "cip_run_6": 0.8134,
+        "cip_run_7": 0.7901,
+        "naverloo-frgpt4": 0.8641,
+        "naverloo-rgpt4": 0.8829,
+        "naverloo_bm25_RR": 0.7257,
+        "naverloo_bm25_splades_RR": 0.7939,
+        "naverloo_fs": 0.7096,
+        "naverloo_fs_RR": 0.8138,
+        "naverloo_fs_RR_duo": 0.855,
+        "slim-pp-0shot-uw": 0.7019,
+        "splade_pp_ensemble_distil": 0.6572,
+        "splade_pp_self_distil": 0.6842,
+        "uogtr_b_grf_e": 0.6905,
+        "uogtr_b_grf_e_gb": 0.7327,
+        "uogtr_be": 0.6767,
+        "uogtr_be_gb": 0.7275,
+        "uogtr_dph": 0.4857,
+        "uogtr_dph_bo1": 0.4081,
+        "uogtr_qr_be": 0.7079,
+        "uogtr_qr_be_gb": 0.7441,
+        "uogtr_s": 0.6612,
+        "uogtr_se": 0.7447,
+        "uogtr_se_gb": 0.7509,
+        "uot-yahoo_LLMs-blender": 0.4802,
+        "uot-yahoo_rankgpt35": 0.5341,
+        "uot-yahoo_rankgpt4": 0.561
+      }
+    },
+    "NISTRetrieval-reason2": {
+      "labels": {
+        "kappa": 0.18381687156755147,
+        "nominalAlpha": 0.15930694852663851,
+        "binaryKappa": {
+          "0|123": 0.2901835091478543,
+          "01|23": 0.33973800371422713,
+          "012|3": 0.009663191444516288
+        },
+        "confusion": [
+          [
+            832,
+            848,
+            325,
+            0
+          ],
+          [
+            256,
+            626,
+            351,
+            0
+          ],
+          [
+            52,
+            337,
+            419,
+            0
+          ],
+          [
+            19,
+            110,
+            246,
+            2
+          ]
+        ],
+        "gradeDistribution": [
+          1159,
+          1921,
+          1341,
+          2
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0420529052679177
+      },
+      "ranking": {
+        "kendallTau": 0.9191919191919192,
+        "spearmanRho": 0.9862725871970864,
+        "fullTrecKendallTau": 0.8821548821548821,
+        "fullTrecSpearmanRho": 0.9745062333660176
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4999,
+        "WatS-LLM-Rerank": 0.621,
+        "agg-cocondenser": 0.6576,
+        "bm25_splades": 0.6817,
+        "cip_run_1": 0.8329,
+        "cip_run_2": 0.8329,
+        "cip_run_3": 0.8095,
+        "cip_run_4": 0.7903,
+        "cip_run_5": 0.806,
+        "cip_run_6": 0.8134,
+        "cip_run_7": 0.7901,
+        "naverloo-frgpt4": 0.8641,
+        "naverloo-rgpt4": 0.8829,
+        "naverloo_bm25_RR": 0.727,
+        "naverloo_bm25_splades_RR": 0.7955,
+        "naverloo_fs": 0.7113,
+        "naverloo_fs_RR": 0.8152,
+        "naverloo_fs_RR_duo": 0.855,
+        "slim-pp-0shot-uw": 0.7038,
+        "splade_pp_ensemble_distil": 0.6572,
+        "splade_pp_self_distil": 0.6859,
+        "uogtr_b_grf_e": 0.6933,
+        "uogtr_b_grf_e_gb": 0.7355,
+        "uogtr_be": 0.6795,
+        "uogtr_be_gb": 0.7303,
+        "uogtr_dph": 0.4857,
+        "uogtr_dph_bo1": 0.4081,
+        "uogtr_qr_be": 0.7107,
+        "uogtr_qr_be_gb": 0.7469,
+        "uogtr_s": 0.6612,
+        "uogtr_se": 0.7475,
+        "uogtr_se_gb": 0.7537,
+        "uot-yahoo_LLMs-blender": 0.4802,
+        "uot-yahoo_rankgpt35": 0.5341,
+        "uot-yahoo_rankgpt4": 0.561
+      }
+    },
+    "Olz-exp": {
+      "labels": {
+        "kappa": 0.251860975942796,
+        "nominalAlpha": 0.2473170974239738,
+        "binaryKappa": {
+          "0|123": 0.399740929756314,
+          "01|23": 0.3577471573033166,
+          "012|3": 0.2935965564119906
+        },
+        "confusion": [
+          [
+            1550,
+            360,
+            66,
+            29
+          ],
+          [
+            618,
+            417,
+            136,
+            62
+          ],
+          [
+            206,
+            307,
+            186,
+            109
+          ],
+          [
+            61,
+            126,
+            68,
+            122
+          ]
+        ],
+        "gradeDistribution": [
+          2435,
+          1210,
+          456,
+          322
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.6981686638028487
+      },
+      "ranking": {
+        "kendallTau": 0.9158249158249159,
+        "spearmanRho": 0.9868328897604707,
+        "fullTrecKendallTau": 0.898989898989899,
+        "fullTrecSpearmanRho": 0.9815100154083205
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3069,
+        "WatS-LLM-Rerank": 0.4045,
+        "agg-cocondenser": 0.5017,
+        "bm25_splades": 0.4962,
+        "cip_run_1": 0.7257,
+        "cip_run_2": 0.7257,
+        "cip_run_3": 0.6923,
+        "cip_run_4": 0.6569,
+        "cip_run_5": 0.6712,
+        "cip_run_6": 0.698,
+        "cip_run_7": 0.6732,
+        "naverloo-frgpt4": 0.7766,
+        "naverloo-rgpt4": 0.7701,
+        "naverloo_bm25_RR": 0.5909,
+        "naverloo_bm25_splades_RR": 0.6504,
+        "naverloo_fs": 0.5381,
+        "naverloo_fs_RR": 0.676,
+        "naverloo_fs_RR_duo": 0.7656,
+        "slim-pp-0shot-uw": 0.5406,
+        "splade_pp_ensemble_distil": 0.4935,
+        "splade_pp_self_distil": 0.5139,
+        "uogtr_b_grf_e": 0.5482,
+        "uogtr_b_grf_e_gb": 0.5854,
+        "uogtr_be": 0.553,
+        "uogtr_be_gb": 0.6051,
+        "uogtr_dph": 0.3066,
+        "uogtr_dph_bo1": 0.2384,
+        "uogtr_qr_be": 0.5586,
+        "uogtr_qr_be_gb": 0.5988,
+        "uogtr_s": 0.4966,
+        "uogtr_se": 0.6127,
+        "uogtr_se_gb": 0.6154,
+        "uot-yahoo_LLMs-blender": 0.2924,
+        "uot-yahoo_rankgpt35": 0.3547,
+        "uot-yahoo_rankgpt4": 0.406
+      }
+    },
+    "Olz-gpt4o": {
+      "labels": {
+        "kappa": 0.2624717058201475,
+        "nominalAlpha": 0.26028917005049956,
+        "binaryKappa": {
+          "0|123": 0.42279277057515147,
+          "01|23": 0.36568333852393003,
+          "012|3": 0.3066172093176926
+        },
+        "confusion": [
+          [
+            1492,
+            392,
+            89,
+            32
+          ],
+          [
+            560,
+            434,
+            142,
+            97
+          ],
+          [
+            171,
+            315,
+            204,
+            118
+          ],
+          [
+            35,
+            133,
+            69,
+            140
+          ]
+        ],
+        "gradeDistribution": [
+          2258,
+          1274,
+          504,
+          387
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.7784309292335518
+      },
+      "ranking": {
+        "kendallTau": 0.9023569023569024,
+        "spearmanRho": 0.9829107718167811,
+        "fullTrecKendallTau": 0.8922558922558923,
+        "fullTrecSpearmanRho": 0.977868048746323
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3434,
+        "WatS-LLM-Rerank": 0.424,
+        "agg-cocondenser": 0.5257,
+        "bm25_splades": 0.5271,
+        "cip_run_1": 0.7659,
+        "cip_run_2": 0.7659,
+        "cip_run_3": 0.7308,
+        "cip_run_4": 0.7038,
+        "cip_run_5": 0.7101,
+        "cip_run_6": 0.7361,
+        "cip_run_7": 0.71,
+        "naverloo-frgpt4": 0.7919,
+        "naverloo-rgpt4": 0.8097,
+        "naverloo_bm25_RR": 0.6295,
+        "naverloo_bm25_splades_RR": 0.6826,
+        "naverloo_fs": 0.5612,
+        "naverloo_fs_RR": 0.7089,
+        "naverloo_fs_RR_duo": 0.7796,
+        "slim-pp-0shot-uw": 0.5608,
+        "splade_pp_ensemble_distil": 0.5017,
+        "splade_pp_self_distil": 0.5286,
+        "uogtr_b_grf_e": 0.5581,
+        "uogtr_b_grf_e_gb": 0.5832,
+        "uogtr_be": 0.5619,
+        "uogtr_be_gb": 0.5956,
+        "uogtr_dph": 0.3346,
+        "uogtr_dph_bo1": 0.257,
+        "uogtr_qr_be": 0.5557,
+        "uogtr_qr_be_gb": 0.598,
+        "uogtr_s": 0.5028,
+        "uogtr_se": 0.5989,
+        "uogtr_se_gb": 0.6033,
+        "uot-yahoo_LLMs-blender": 0.3131,
+        "uot-yahoo_rankgpt35": 0.3712,
+        "uot-yahoo_rankgpt4": 0.4348
+      }
+    },
+    "Olz-halfbin": {
+      "labels": {
+        "kappa": 0.20644450094410624,
+        "nominalAlpha": 0.20064798285366048,
+        "binaryKappa": {
+          "0|123": 0.4007510722449942,
+          "01|23": 0.258746775733565,
+          "012|3": 0.2448790708533661
+        },
+        "confusion": [
+          [
+            1393,
+            438,
+            72,
+            102
+          ],
+          [
+            520,
+            459,
+            80,
+            174
+          ],
+          [
+            151,
+            438,
+            63,
+            156
+          ],
+          [
+            36,
+            123,
+            62,
+            156
+          ]
+        ],
+        "gradeDistribution": [
+          2100,
+          1458,
+          277,
+          588
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.8537191951164368
+      },
+      "ranking": {
+        "kendallTau": 0.9217833369467879,
+        "spearmanRho": 0.9873240447211002,
+        "fullTrecKendallTau": 0.8982341276087313,
+        "fullTrecSpearmanRho": 0.9800406214943309
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3858,
+        "WatS-LLM-Rerank": 0.4963,
+        "agg-cocondenser": 0.5637,
+        "bm25_splades": 0.5904,
+        "cip_run_1": 0.783,
+        "cip_run_2": 0.7845,
+        "cip_run_3": 0.7574,
+        "cip_run_4": 0.7168,
+        "cip_run_5": 0.7427,
+        "cip_run_6": 0.7521,
+        "cip_run_7": 0.7265,
+        "naverloo-frgpt4": 0.8182,
+        "naverloo-rgpt4": 0.8166,
+        "naverloo_bm25_RR": 0.6613,
+        "naverloo_bm25_splades_RR": 0.7441,
+        "naverloo_fs": 0.6335,
+        "naverloo_fs_RR": 0.7637,
+        "naverloo_fs_RR_duo": 0.8079,
+        "slim-pp-0shot-uw": 0.6025,
+        "splade_pp_ensemble_distil": 0.5699,
+        "splade_pp_self_distil": 0.6045,
+        "uogtr_b_grf_e": 0.6321,
+        "uogtr_b_grf_e_gb": 0.6504,
+        "uogtr_be": 0.6136,
+        "uogtr_be_gb": 0.6498,
+        "uogtr_dph": 0.3926,
+        "uogtr_dph_bo1": 0.3087,
+        "uogtr_qr_be": 0.6377,
+        "uogtr_qr_be_gb": 0.6706,
+        "uogtr_s": 0.5717,
+        "uogtr_se": 0.6679,
+        "uogtr_se_gb": 0.6714,
+        "uot-yahoo_LLMs-blender": 0.3758,
+        "uot-yahoo_rankgpt35": 0.4233,
+        "uot-yahoo_rankgpt4": 0.4684
+      }
+    },
+    "Olz-multiprompt": {
+      "labels": {
+        "kappa": 0.24453570472208597,
+        "nominalAlpha": 0.23971988629050334,
+        "binaryKappa": {
+          "0|123": 0.37642967781390685,
+          "01|23": 0.3934250917237359,
+          "012|3": 0.21502902650607575
+        },
+        "confusion": [
+          [
+            1184,
+            422,
+            304,
+            95
+          ],
+          [
+            413,
+            341,
+            333,
+            146
+          ],
+          [
+            83,
+            176,
+            426,
+            123
+          ],
+          [
+            33,
+            37,
+            181,
+            126
+          ]
+        ],
+        "gradeDistribution": [
+          1713,
+          976,
+          1244,
+          490
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.1155324440425052
+      },
+      "ranking": {
+        "kendallTau": 0.9326599326599326,
+        "spearmanRho": 0.9893542512956996,
+        "fullTrecKendallTau": 0.9023569023569024,
+        "fullTrecSpearmanRho": 0.9806695615632441
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4233,
+        "WatS-LLM-Rerank": 0.5449,
+        "agg-cocondenser": 0.5939,
+        "bm25_splades": 0.6353,
+        "cip_run_1": 0.7993,
+        "cip_run_2": 0.7993,
+        "cip_run_3": 0.7834,
+        "cip_run_4": 0.7509,
+        "cip_run_5": 0.7692,
+        "cip_run_6": 0.7736,
+        "cip_run_7": 0.7623,
+        "naverloo-frgpt4": 0.8323,
+        "naverloo-rgpt4": 0.8384,
+        "naverloo_bm25_RR": 0.6764,
+        "naverloo_bm25_splades_RR": 0.7545,
+        "naverloo_fs": 0.6612,
+        "naverloo_fs_RR": 0.7754,
+        "naverloo_fs_RR_duo": 0.8234,
+        "slim-pp-0shot-uw": 0.6341,
+        "splade_pp_ensemble_distil": 0.6117,
+        "splade_pp_self_distil": 0.6358,
+        "uogtr_b_grf_e": 0.6535,
+        "uogtr_b_grf_e_gb": 0.6781,
+        "uogtr_be": 0.6335,
+        "uogtr_be_gb": 0.6715,
+        "uogtr_dph": 0.4222,
+        "uogtr_dph_bo1": 0.3401,
+        "uogtr_qr_be": 0.6684,
+        "uogtr_qr_be_gb": 0.6955,
+        "uogtr_s": 0.614,
+        "uogtr_se": 0.6901,
+        "uogtr_se_gb": 0.6928,
+        "uot-yahoo_LLMs-blender": 0.4086,
+        "uot-yahoo_rankgpt35": 0.4618,
+        "uot-yahoo_rankgpt4": 0.4989
+      }
+    },
+    "Olz-somebin": {
+      "labels": {
+        "kappa": 0.21093492611754122,
+        "nominalAlpha": 0.2025689346214482,
+        "binaryKappa": {
+          "0|123": 0.3853563197542049,
+          "01|23": 0.38826313787795247,
+          "012|3": 0.11365579757066445
+        },
+        "confusion": [
+          [
+            1377,
+            240,
+            225,
+            163
+          ],
+          [
+            546,
+            197,
+            272,
+            218
+          ],
+          [
+            134,
+            132,
+            318,
+            224
+          ],
+          [
+            45,
+            26,
+            189,
+            117
+          ]
+        ],
+        "gradeDistribution": [
+          2102,
+          595,
+          1004,
+          722
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0782274474338684
+      },
+      "ranking": {
+        "kendallTau": 0.9158249158249159,
+        "spearmanRho": 0.9865527384787786,
+        "fullTrecKendallTau": 0.8922558922558923,
+        "fullTrecSpearmanRho": 0.9764672923378624
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3634,
+        "WatS-LLM-Rerank": 0.4831,
+        "agg-cocondenser": 0.487,
+        "bm25_splades": 0.5253,
+        "cip_run_1": 0.6448,
+        "cip_run_2": 0.6448,
+        "cip_run_3": 0.6334,
+        "cip_run_4": 0.6122,
+        "cip_run_5": 0.6202,
+        "cip_run_6": 0.6407,
+        "cip_run_7": 0.6241,
+        "naverloo-frgpt4": 0.6652,
+        "naverloo-rgpt4": 0.6904,
+        "naverloo_bm25_RR": 0.5553,
+        "naverloo_bm25_splades_RR": 0.6259,
+        "naverloo_fs": 0.5545,
+        "naverloo_fs_RR": 0.6386,
+        "naverloo_fs_RR_duo": 0.6533,
+        "slim-pp-0shot-uw": 0.5474,
+        "splade_pp_ensemble_distil": 0.5078,
+        "splade_pp_self_distil": 0.5318,
+        "uogtr_b_grf_e": 0.5468,
+        "uogtr_b_grf_e_gb": 0.5573,
+        "uogtr_be": 0.5422,
+        "uogtr_be_gb": 0.5648,
+        "uogtr_dph": 0.3817,
+        "uogtr_dph_bo1": 0.3122,
+        "uogtr_qr_be": 0.562,
+        "uogtr_qr_be_gb": 0.5822,
+        "uogtr_s": 0.5077,
+        "uogtr_se": 0.5795,
+        "uogtr_se_gb": 0.5829,
+        "uot-yahoo_LLMs-blender": 0.368,
+        "uot-yahoo_rankgpt35": 0.3984,
+        "uot-yahoo_rankgpt4": 0.4323
+      }
+    },
+    "RMITIR-GPT4o": {
+      "labels": {
+        "kappa": 0.2388089753761219,
+        "nominalAlpha": 0.20833893084209087,
+        "binaryKappa": {
+          "0|123": 0.3498826237435765,
+          "01|23": 0.39608555696611575,
+          "012|3": 0.2580011401750941
+        },
+        "confusion": [
+          [
+            1786,
+            68,
+            126,
+            25
+          ],
+          [
+            829,
+            138,
+            207,
+            59
+          ],
+          [
+            347,
+            84,
+            277,
+            100
+          ],
+          [
+            94,
+            59,
+            120,
+            104
+          ]
+        ],
+        "gradeDistribution": [
+          3056,
+          349,
+          730,
+          288
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.6043409450599141
+      },
+      "ranking": {
+        "kendallTau": 0.9090909090909091,
+        "spearmanRho": 0.9848718307886258,
+        "fullTrecKendallTau": 0.9057239057239057,
+        "fullTrecSpearmanRho": 0.9837512256618574
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2518,
+        "WatS-LLM-Rerank": 0.4077,
+        "agg-cocondenser": 0.4724,
+        "bm25_splades": 0.4871,
+        "cip_run_1": 0.7375,
+        "cip_run_2": 0.7375,
+        "cip_run_3": 0.7169,
+        "cip_run_4": 0.668,
+        "cip_run_5": 0.6904,
+        "cip_run_6": 0.7133,
+        "cip_run_7": 0.6901,
+        "naverloo-frgpt4": 0.7982,
+        "naverloo-rgpt4": 0.7963,
+        "naverloo_bm25_RR": 0.6075,
+        "naverloo_bm25_splades_RR": 0.6628,
+        "naverloo_fs": 0.5277,
+        "naverloo_fs_RR": 0.6885,
+        "naverloo_fs_RR_duo": 0.7906,
+        "slim-pp-0shot-uw": 0.5321,
+        "splade_pp_ensemble_distil": 0.4738,
+        "splade_pp_self_distil": 0.4991,
+        "uogtr_b_grf_e": 0.5419,
+        "uogtr_b_grf_e_gb": 0.5718,
+        "uogtr_be": 0.5404,
+        "uogtr_be_gb": 0.5787,
+        "uogtr_dph": 0.2837,
+        "uogtr_dph_bo1": 0.2195,
+        "uogtr_qr_be": 0.5387,
+        "uogtr_qr_be_gb": 0.5756,
+        "uogtr_s": 0.4769,
+        "uogtr_se": 0.5818,
+        "uogtr_se_gb": 0.5834,
+        "uot-yahoo_LLMs-blender": 0.2628,
+        "uot-yahoo_rankgpt35": 0.3238,
+        "uot-yahoo_rankgpt4": 0.4042
+      }
+    },
+    "RMITIR-llama38b": {
+      "labels": {
+        "kappa": 0.2006007320040616,
+        "nominalAlpha": 0.18771989806041312,
+        "binaryKappa": {
+          "0|123": 0.32799990092632886,
+          "01|23": 0.31941624711615313,
+          "012|3": 0.13437705938742883
+        },
+        "confusion": [
+          [
+            1536,
+            164,
+            261,
+            44
+          ],
+          [
+            718,
+            198,
+            271,
+            46
+          ],
+          [
+            252,
+            181,
+            340,
+            35
+          ],
+          [
+            70,
+            71,
+            186,
+            50
+          ]
+        ],
+        "gradeDistribution": [
+          2576,
+          614,
+          1058,
+          175
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.7359258421885598
+      },
+      "ranking": {
+        "kendallTau": 0.9057239057239057,
+        "spearmanRho": 0.982630620535089,
+        "fullTrecKendallTau": 0.8686868686868687,
+        "fullTrecSpearmanRho": 0.9750665359294018
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3546,
+        "WatS-LLM-Rerank": 0.5021,
+        "agg-cocondenser": 0.5128,
+        "bm25_splades": 0.5238,
+        "cip_run_1": 0.7429,
+        "cip_run_2": 0.7429,
+        "cip_run_3": 0.7214,
+        "cip_run_4": 0.6818,
+        "cip_run_5": 0.7139,
+        "cip_run_6": 0.6872,
+        "cip_run_7": 0.69,
+        "naverloo-frgpt4": 0.739,
+        "naverloo-rgpt4": 0.741,
+        "naverloo_bm25_RR": 0.5893,
+        "naverloo_bm25_splades_RR": 0.6502,
+        "naverloo_fs": 0.5618,
+        "naverloo_fs_RR": 0.6735,
+        "naverloo_fs_RR_duo": 0.7346,
+        "slim-pp-0shot-uw": 0.5458,
+        "splade_pp_ensemble_distil": 0.5037,
+        "splade_pp_self_distil": 0.5241,
+        "uogtr_b_grf_e": 0.5592,
+        "uogtr_b_grf_e_gb": 0.5836,
+        "uogtr_be": 0.5341,
+        "uogtr_be_gb": 0.5682,
+        "uogtr_dph": 0.3406,
+        "uogtr_dph_bo1": 0.2813,
+        "uogtr_qr_be": 0.5727,
+        "uogtr_qr_be_gb": 0.5864,
+        "uogtr_s": 0.5049,
+        "uogtr_se": 0.6086,
+        "uogtr_se_gb": 0.6118,
+        "uot-yahoo_LLMs-blender": 0.3597,
+        "uot-yahoo_rankgpt35": 0.4243,
+        "uot-yahoo_rankgpt4": 0.4463
+      }
+    },
+    "RMITIR-llama70B": {
+      "labels": {
+        "kappa": 0.26545877761770476,
+        "nominalAlpha": 0.24305522235667232,
+        "binaryKappa": {
+          "0|123": 0.4166257332529731,
+          "01|23": 0.39164320104826983,
+          "012|3": 0.28431635161276253
+        },
+        "confusion": [
+          [
+            1436,
+            103,
+            402,
+            62,
+            0,
+            2
+          ],
+          [
+            542,
+            90,
+            482,
+            119,
+            0,
+            0
+          ],
+          [
+            138,
+            41,
+            511,
+            118,
+            0,
+            0
+          ],
+          [
+            38,
+            9,
+            186,
+            144,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "gradeDistribution": [
+          2154,
+          243,
+          1581,
+          443,
+          0,
+          2
+        ],
+        "labelsOutside0to3": 2,
+        "averageGrade": 1.0725751752204387
+      },
+      "ranking": {
+        "kendallTau": 0.9393939393939394,
+        "spearmanRho": 0.9907550077041603,
+        "fullTrecKendallTau": 0.9090909090909091,
+        "fullTrecSpearmanRho": 0.9834710743801653
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4099,
+        "WatS-LLM-Rerank": 0.546,
+        "agg-cocondenser": 0.5891,
+        "bm25_splades": 0.6293,
+        "cip_run_1": 0.8127,
+        "cip_run_2": 0.8127,
+        "cip_run_3": 0.7842,
+        "cip_run_4": 0.7506,
+        "cip_run_5": 0.7752,
+        "cip_run_6": 0.7706,
+        "cip_run_7": 0.7647,
+        "naverloo-frgpt4": 0.8422,
+        "naverloo-rgpt4": 0.8631,
+        "naverloo_bm25_RR": 0.6793,
+        "naverloo_bm25_splades_RR": 0.7554,
+        "naverloo_fs": 0.6657,
+        "naverloo_fs_RR": 0.7747,
+        "naverloo_fs_RR_duo": 0.8277,
+        "slim-pp-0shot-uw": 0.6494,
+        "splade_pp_ensemble_distil": 0.6083,
+        "splade_pp_self_distil": 0.6356,
+        "uogtr_b_grf_e": 0.656,
+        "uogtr_b_grf_e_gb": 0.6855,
+        "uogtr_be": 0.6518,
+        "uogtr_be_gb": 0.6853,
+        "uogtr_dph": 0.4271,
+        "uogtr_dph_bo1": 0.3318,
+        "uogtr_qr_be": 0.6639,
+        "uogtr_qr_be_gb": 0.6908,
+        "uogtr_s": 0.6104,
+        "uogtr_se": 0.6897,
+        "uogtr_se_gb": 0.6936,
+        "uot-yahoo_LLMs-blender": 0.422,
+        "uot-yahoo_rankgpt35": 0.4842,
+        "uot-yahoo_rankgpt4": 0.5177
+      }
+    },
+    "TREMA-4prompts": {
+      "labels": {
+        "kappa": 0.1829442621350349,
+        "nominalAlpha": 0.1363015475145839,
+        "binaryKappa": {
+          "0|123": 0.3022027135254199,
+          "01|23": 0.26970249563320425,
+          "012|3": 0.16639000590011546
+        },
+        "confusion": [
+          [
+            783,
+            409,
+            692,
+            121
+          ],
+          [
+            191,
+            244,
+            682,
+            116
+          ],
+          [
+            43,
+            72,
+            596,
+            97
+          ],
+          [
+            10,
+            26,
+            243,
+            98
+          ]
+        ],
+        "gradeDistribution": [
+          1027,
+          751,
+          2213,
+          432
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.4634863215012435
+      },
+      "ranking": {
+        "kendallTau": 0.9528619528619529,
+        "spearmanRho": 0.9938366718027735,
+        "fullTrecKendallTau": 0.9225589225589226,
+        "fullTrecSpearmanRho": 0.9865527384787786
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.4956,
+        "WatS-LLM-Rerank": 0.5809,
+        "agg-cocondenser": 0.6103,
+        "bm25_splades": 0.6319,
+        "cip_run_1": 0.811,
+        "cip_run_2": 0.811,
+        "cip_run_3": 0.7943,
+        "cip_run_4": 0.7755,
+        "cip_run_5": 0.7848,
+        "cip_run_6": 0.7904,
+        "cip_run_7": 0.7731,
+        "naverloo-frgpt4": 0.8226,
+        "naverloo-rgpt4": 0.8325,
+        "naverloo_bm25_RR": 0.6814,
+        "naverloo_bm25_splades_RR": 0.7405,
+        "naverloo_fs": 0.6709,
+        "naverloo_fs_RR": 0.765,
+        "naverloo_fs_RR_duo": 0.8216,
+        "slim-pp-0shot-uw": 0.6696,
+        "splade_pp_ensemble_distil": 0.6232,
+        "splade_pp_self_distil": 0.6345,
+        "uogtr_b_grf_e": 0.6725,
+        "uogtr_b_grf_e_gb": 0.7011,
+        "uogtr_be": 0.653,
+        "uogtr_be_gb": 0.7013,
+        "uogtr_dph": 0.4729,
+        "uogtr_dph_bo1": 0.4114,
+        "uogtr_qr_be": 0.6915,
+        "uogtr_qr_be_gb": 0.7159,
+        "uogtr_s": 0.6265,
+        "uogtr_se": 0.7229,
+        "uogtr_se_gb": 0.7263,
+        "uot-yahoo_LLMs-blender": 0.4679,
+        "uot-yahoo_rankgpt35": 0.5191,
+        "uot-yahoo_rankgpt4": 0.5416
+      }
+    },
+    "TREMA-CoT": {
+      "labels": {
+        "kappa": 0.19612426201357802,
+        "nominalAlpha": 0.1949634759512936,
+        "binaryKappa": {
+          "0|123": 0.31812253726117995,
+          "01|23": 0.3208128806454236,
+          "012|3": 0.18363503936341521
+        },
+        "confusion": [
+          [
+            1178,
+            443,
+            244,
+            140
+          ],
+          [
+            465,
+            378,
+            260,
+            130
+          ],
+          [
+            149,
+            216,
+            278,
+            165
+          ],
+          [
+            43,
+            85,
+            124,
+            125
+          ]
+        ],
+        "gradeDistribution": [
+          1835,
+          1122,
+          906,
+          560
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.0431833597106037
+      },
+      "ranking": {
+        "kendallTau": 0.9141414141414141,
+        "spearmanRho": 0.9858523602745483,
+        "fullTrecKendallTau": 0.8838383838383839,
+        "fullTrecSpearmanRho": 0.9773077461829388
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.382,
+        "WatS-LLM-Rerank": 0.5065,
+        "agg-cocondenser": 0.5297,
+        "bm25_splades": 0.5468,
+        "cip_run_1": 0.7254,
+        "cip_run_2": 0.7242,
+        "cip_run_3": 0.7082,
+        "cip_run_4": 0.6704,
+        "cip_run_5": 0.7031,
+        "cip_run_6": 0.6962,
+        "cip_run_7": 0.6827,
+        "naverloo-frgpt4": 0.7246,
+        "naverloo-rgpt4": 0.7275,
+        "naverloo_bm25_RR": 0.5833,
+        "naverloo_bm25_splades_RR": 0.6599,
+        "naverloo_fs": 0.5752,
+        "naverloo_fs_RR": 0.6666,
+        "naverloo_fs_RR_duo": 0.7277,
+        "slim-pp-0shot-uw": 0.5419,
+        "splade_pp_ensemble_distil": 0.529,
+        "splade_pp_self_distil": 0.546,
+        "uogtr_b_grf_e": 0.5846,
+        "uogtr_b_grf_e_gb": 0.5943,
+        "uogtr_be": 0.5653,
+        "uogtr_be_gb": 0.5959,
+        "uogtr_dph": 0.3754,
+        "uogtr_dph_bo1": 0.3262,
+        "uogtr_qr_be": 0.6074,
+        "uogtr_qr_be_gb": 0.6085,
+        "uogtr_s": 0.529,
+        "uogtr_se": 0.6252,
+        "uogtr_se_gb": 0.6317,
+        "uot-yahoo_LLMs-blender": 0.3918,
+        "uot-yahoo_rankgpt35": 0.44,
+        "uot-yahoo_rankgpt4": 0.4554
+      }
+    },
+    "TREMA-all": {
+      "labels": {
+        "kappa": 0.14710910408119857,
+        "nominalAlpha": 0.13687110547686965,
+        "binaryKappa": {
+          "0|123": 0.3243630984464598,
+          "01|23": 0.29781382630017,
+          "012|3": 0.07168187824442102
+        },
+        "confusion": [
+          [
+            1449,
+            191,
+            208,
+            157
+          ],
+          [
+            686,
+            155,
+            188,
+            204
+          ],
+          [
+            207,
+            186,
+            193,
+            222
+          ],
+          [
+            57,
+            84,
+            145,
+            91
+          ]
+        ],
+        "gradeDistribution": [
+          2399,
+          616,
+          734,
+          674
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.9283291883337101
+      },
+      "ranking": {
+        "kendallTau": 0.9225589225589226,
+        "spearmanRho": 0.9896344025773918,
+        "fullTrecKendallTau": 0.898989898989899,
+        "fullTrecSpearmanRho": 0.9815100154083205
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3641,
+        "WatS-LLM-Rerank": 0.4468,
+        "agg-cocondenser": 0.5224,
+        "bm25_splades": 0.5364,
+        "cip_run_1": 0.694,
+        "cip_run_2": 0.694,
+        "cip_run_3": 0.6797,
+        "cip_run_4": 0.6655,
+        "cip_run_5": 0.6507,
+        "cip_run_6": 0.6905,
+        "cip_run_7": 0.6635,
+        "naverloo-frgpt4": 0.7081,
+        "naverloo-rgpt4": 0.6985,
+        "naverloo_bm25_RR": 0.5826,
+        "naverloo_bm25_splades_RR": 0.6462,
+        "naverloo_fs": 0.5618,
+        "naverloo_fs_RR": 0.6735,
+        "naverloo_fs_RR_duo": 0.7124,
+        "slim-pp-0shot-uw": 0.5731,
+        "splade_pp_ensemble_distil": 0.5359,
+        "splade_pp_self_distil": 0.555,
+        "uogtr_b_grf_e": 0.573,
+        "uogtr_b_grf_e_gb": 0.6048,
+        "uogtr_be": 0.5576,
+        "uogtr_be_gb": 0.6077,
+        "uogtr_dph": 0.3236,
+        "uogtr_dph_bo1": 0.2817,
+        "uogtr_qr_be": 0.5856,
+        "uogtr_qr_be_gb": 0.6114,
+        "uogtr_s": 0.5395,
+        "uogtr_se": 0.6433,
+        "uogtr_se_gb": 0.6436,
+        "uot-yahoo_LLMs-blender": 0.3108,
+        "uot-yahoo_rankgpt35": 0.3506,
+        "uot-yahoo_rankgpt4": 0.3874
+      }
+    },
+    "TREMA-direct": {
+      "labels": {
+        "kappa": 0.1742156467734584,
+        "nominalAlpha": 0.12399824003980386,
+        "binaryKappa": {
+          "0|123": 0.3204677593992557,
+          "01|23": 0.3462281530870359,
+          "012|3": 0.17627224299746924
+        },
+        "confusion": [
+          [
+            1447,
+            34,
+            125,
+            399
+          ],
+          [
+            678,
+            25,
+            90,
+            440
+          ],
+          [
+            224,
+            21,
+            97,
+            466
+          ],
+          [
+            55,
+            7,
+            30,
+            285
+          ]
+        ],
+        "gradeDistribution": [
+          2404,
+          87,
+          342,
+          1590
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.2527696133845807
+      },
+      "ranking": {
+        "kendallTau": 0.9191919191919192,
+        "spearmanRho": 0.9871130410421628,
+        "fullTrecKendallTau": 0.9023569023569024,
+        "fullTrecSpearmanRho": 0.9812298641266284
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3728,
+        "WatS-LLM-Rerank": 0.533,
+        "agg-cocondenser": 0.6249,
+        "bm25_splades": 0.6203,
+        "cip_run_1": 0.8154,
+        "cip_run_2": 0.8154,
+        "cip_run_3": 0.8129,
+        "cip_run_4": 0.7944,
+        "cip_run_5": 0.7792,
+        "cip_run_6": 0.8381,
+        "cip_run_7": 0.7959,
+        "naverloo-frgpt4": 0.8416,
+        "naverloo-rgpt4": 0.8353,
+        "naverloo_bm25_RR": 0.6971,
+        "naverloo_bm25_splades_RR": 0.7666,
+        "naverloo_fs": 0.6582,
+        "naverloo_fs_RR": 0.7929,
+        "naverloo_fs_RR_duo": 0.8431,
+        "slim-pp-0shot-uw": 0.6625,
+        "splade_pp_ensemble_distil": 0.6328,
+        "splade_pp_self_distil": 0.6307,
+        "uogtr_b_grf_e": 0.6729,
+        "uogtr_b_grf_e_gb": 0.7078,
+        "uogtr_be": 0.6543,
+        "uogtr_be_gb": 0.706,
+        "uogtr_dph": 0.3325,
+        "uogtr_dph_bo1": 0.2883,
+        "uogtr_qr_be": 0.6778,
+        "uogtr_qr_be_gb": 0.7062,
+        "uogtr_s": 0.6313,
+        "uogtr_se": 0.7494,
+        "uogtr_se_gb": 0.7512,
+        "uot-yahoo_LLMs-blender": 0.3455,
+        "uot-yahoo_rankgpt35": 0.407,
+        "uot-yahoo_rankgpt4": 0.4554
+      }
+    },
+    "TREMA-naiveBdecompose": {
+      "labels": {
+        "kappa": 0.17410234518367085,
+        "nominalAlpha": 0.15838412505333033,
+        "binaryKappa": {
+          "0|123": 0.3085358823100339,
+          "01|23": 0.29155296940214304,
+          "012|3": 0.015310645976462561
+        },
+        "confusion": [
+          [
+            1538,
+            182,
+            277,
+            8
+          ],
+          [
+            721,
+            205,
+            297,
+            10
+          ],
+          [
+            282,
+            192,
+            324,
+            10
+          ],
+          [
+            86,
+            66,
+            219,
+            6
+          ]
+        ],
+        "gradeDistribution": [
+          2627,
+          645,
+          1117,
+          34
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.6739769387293693
+      },
+      "ranking": {
+        "kendallTau": 0.9285116824719469,
+        "spearmanRho": 0.9884445713713724,
+        "fullTrecKendallTau": 0.8915057820835722,
+        "fullTrecSpearmanRho": 0.9800406214943309
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3601,
+        "WatS-LLM-Rerank": 0.4818,
+        "agg-cocondenser": 0.4947,
+        "bm25_splades": 0.5174,
+        "cip_run_1": 0.686,
+        "cip_run_2": 0.6867,
+        "cip_run_3": 0.6795,
+        "cip_run_4": 0.6457,
+        "cip_run_5": 0.6717,
+        "cip_run_6": 0.6619,
+        "cip_run_7": 0.6564,
+        "naverloo-frgpt4": 0.6923,
+        "naverloo-rgpt4": 0.6948,
+        "naverloo_bm25_RR": 0.5781,
+        "naverloo_bm25_splades_RR": 0.641,
+        "naverloo_fs": 0.5485,
+        "naverloo_fs_RR": 0.6506,
+        "naverloo_fs_RR_duo": 0.6842,
+        "slim-pp-0shot-uw": 0.5096,
+        "splade_pp_ensemble_distil": 0.4851,
+        "splade_pp_self_distil": 0.507,
+        "uogtr_b_grf_e": 0.551,
+        "uogtr_b_grf_e_gb": 0.5676,
+        "uogtr_be": 0.5202,
+        "uogtr_be_gb": 0.5549,
+        "uogtr_dph": 0.3287,
+        "uogtr_dph_bo1": 0.2936,
+        "uogtr_qr_be": 0.5645,
+        "uogtr_qr_be_gb": 0.5925,
+        "uogtr_s": 0.4858,
+        "uogtr_se": 0.5875,
+        "uogtr_se_gb": 0.5945,
+        "uot-yahoo_LLMs-blender": 0.3374,
+        "uot-yahoo_rankgpt35": 0.3883,
+        "uot-yahoo_rankgpt4": 0.4235
+      }
+    },
+    "TREMA-nuggets": {
+      "labels": {
+        "kappa": 0.060412018764851534,
+        "nominalAlpha": 0.057192600137385474,
+        "binaryKappa": {
+          "0|123": 0.1504847963887998,
+          "01|23": 0.0992379101001354,
+          "012|3": -0.007705446750397084
+        },
+        "confusion": [
+          [
+            1130,
+            350,
+            407,
+            118
+          ],
+          [
+            593,
+            229,
+            283,
+            128
+          ],
+          [
+            284,
+            211,
+            228,
+            85
+          ],
+          [
+            120,
+            103,
+            126,
+            28
+          ]
+        ],
+        "gradeDistribution": [
+          2127,
+          893,
+          1044,
+          359
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.917476825683925
+      },
+      "ranking": {
+        "kendallTau": 0.8787878787878788,
+        "spearmanRho": 0.977868048746323,
+        "fullTrecKendallTau": 0.8888888888888888,
+        "fullTrecSpearmanRho": 0.9775878974646309
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2919,
+        "WatS-LLM-Rerank": 0.338,
+        "agg-cocondenser": 0.3362,
+        "bm25_splades": 0.3575,
+        "cip_run_1": 0.4381,
+        "cip_run_2": 0.4381,
+        "cip_run_3": 0.433,
+        "cip_run_4": 0.4161,
+        "cip_run_5": 0.4123,
+        "cip_run_6": 0.4317,
+        "cip_run_7": 0.4225,
+        "naverloo-frgpt4": 0.4328,
+        "naverloo-rgpt4": 0.4393,
+        "naverloo_bm25_RR": 0.3927,
+        "naverloo_bm25_splades_RR": 0.3985,
+        "naverloo_fs": 0.3722,
+        "naverloo_fs_RR": 0.4074,
+        "naverloo_fs_RR_duo": 0.4276,
+        "slim-pp-0shot-uw": 0.3926,
+        "splade_pp_ensemble_distil": 0.3615,
+        "splade_pp_self_distil": 0.3574,
+        "uogtr_b_grf_e": 0.3875,
+        "uogtr_b_grf_e_gb": 0.3986,
+        "uogtr_be": 0.3921,
+        "uogtr_be_gb": 0.4058,
+        "uogtr_dph": 0.3163,
+        "uogtr_dph_bo1": 0.2879,
+        "uogtr_qr_be": 0.3961,
+        "uogtr_qr_be_gb": 0.3953,
+        "uogtr_s": 0.3608,
+        "uogtr_se": 0.3935,
+        "uogtr_se_gb": 0.3959,
+        "uot-yahoo_LLMs-blender": 0.3117,
+        "uot-yahoo_rankgpt35": 0.3139,
+        "uot-yahoo_rankgpt4": 0.3211
+      }
+    },
+    "TREMA-other": {
+      "labels": {
+        "kappa": 0.14076384195997524,
+        "nominalAlpha": 0.10709481824067602,
+        "binaryKappa": {
+          "0|123": 0.27404550615068657,
+          "01|23": 0.2015087312375371,
+          "012|3": 0.14109978808014134
+        },
+        "confusion": [
+          [
+            883,
+            391,
+            662,
+            69
+          ],
+          [
+            261,
+            240,
+            664,
+            68
+          ],
+          [
+            118,
+            135,
+            472,
+            83
+          ],
+          [
+            43,
+            43,
+            223,
+            68
+          ]
+        ],
+        "gradeDistribution": [
+          1305,
+          809,
+          2021,
+          288
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.292109427990052
+      },
+      "ranking": {
+        "kendallTau": 0.8619528619528619,
+        "spearmanRho": 0.9613391231264883,
+        "fullTrecKendallTau": 0.8249158249158249,
+        "fullTrecSpearmanRho": 0.9478918616052668
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.5002,
+        "WatS-LLM-Rerank": 0.5631,
+        "agg-cocondenser": 0.665,
+        "bm25_splades": 0.6429,
+        "cip_run_1": 0.7658,
+        "cip_run_2": 0.7658,
+        "cip_run_3": 0.7467,
+        "cip_run_4": 0.7429,
+        "cip_run_5": 0.7212,
+        "cip_run_6": 0.7687,
+        "cip_run_7": 0.7253,
+        "naverloo-frgpt4": 0.775,
+        "naverloo-rgpt4": 0.7925,
+        "naverloo_bm25_RR": 0.6653,
+        "naverloo_bm25_splades_RR": 0.7418,
+        "naverloo_fs": 0.704,
+        "naverloo_fs_RR": 0.7647,
+        "naverloo_fs_RR_duo": 0.7596,
+        "slim-pp-0shot-uw": 0.6707,
+        "splade_pp_ensemble_distil": 0.6391,
+        "splade_pp_self_distil": 0.6572,
+        "uogtr_b_grf_e": 0.6518,
+        "uogtr_b_grf_e_gb": 0.7005,
+        "uogtr_be": 0.6326,
+        "uogtr_be_gb": 0.6864,
+        "uogtr_dph": 0.4985,
+        "uogtr_dph_bo1": 0.4094,
+        "uogtr_qr_be": 0.6647,
+        "uogtr_qr_be_gb": 0.7027,
+        "uogtr_s": 0.6407,
+        "uogtr_se": 0.6982,
+        "uogtr_se_gb": 0.7003,
+        "uot-yahoo_LLMs-blender": 0.5059,
+        "uot-yahoo_rankgpt35": 0.5546,
+        "uot-yahoo_rankgpt4": 0.5697
+      }
+    },
+    "TREMA-questions": {
+      "labels": {
+        "kappa": 0.1137256466512417,
+        "nominalAlpha": 0.08837551064094795,
+        "binaryKappa": {
+          "0|123": 0.26357684465481407,
+          "01|23": 0.28757371829764095,
+          "012|3": 0.04414383500631685
+        },
+        "confusion": [
+          [
+            1405,
+            116,
+            218,
+            266
+          ],
+          [
+            684,
+            59,
+            226,
+            264
+          ],
+          [
+            259,
+            58,
+            175,
+            316
+          ],
+          [
+            102,
+            20,
+            148,
+            107
+          ]
+        ],
+        "gradeDistribution": [
+          2450,
+          253,
+          767,
+          953
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 1.050418268143794
+      },
+      "ranking": {
+        "kendallTau": 0.9225589225589226,
+        "spearmanRho": 0.9882336461689312,
+        "fullTrecKendallTau": 0.898989898989899,
+        "fullTrecSpearmanRho": 0.9815100154083205
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3454,
+        "WatS-LLM-Rerank": 0.3735,
+        "agg-cocondenser": 0.441,
+        "bm25_splades": 0.4364,
+        "cip_run_1": 0.5906,
+        "cip_run_2": 0.5906,
+        "cip_run_3": 0.5727,
+        "cip_run_4": 0.5503,
+        "cip_run_5": 0.548,
+        "cip_run_6": 0.5674,
+        "cip_run_7": 0.5639,
+        "naverloo-frgpt4": 0.5976,
+        "naverloo-rgpt4": 0.6027,
+        "naverloo_bm25_RR": 0.4994,
+        "naverloo_bm25_splades_RR": 0.5455,
+        "naverloo_fs": 0.4702,
+        "naverloo_fs_RR": 0.5587,
+        "naverloo_fs_RR_duo": 0.5876,
+        "slim-pp-0shot-uw": 0.489,
+        "splade_pp_ensemble_distil": 0.4621,
+        "splade_pp_self_distil": 0.475,
+        "uogtr_b_grf_e": 0.4802,
+        "uogtr_b_grf_e_gb": 0.5078,
+        "uogtr_be": 0.4698,
+        "uogtr_be_gb": 0.5164,
+        "uogtr_dph": 0.2986,
+        "uogtr_dph_bo1": 0.2733,
+        "uogtr_qr_be": 0.5047,
+        "uogtr_qr_be_gb": 0.5255,
+        "uogtr_s": 0.4588,
+        "uogtr_se": 0.5398,
+        "uogtr_se_gb": 0.5407,
+        "uot-yahoo_LLMs-blender": 0.2996,
+        "uot-yahoo_rankgpt35": 0.3121,
+        "uot-yahoo_rankgpt4": 0.3582
+      }
+    },
+    "TREMA-rubric0": {
+      "labels": {
+        "kappa": 0.07793337186293804,
+        "nominalAlpha": 0.03751090001488866,
+        "binaryKappa": {
+          "0|123": 0.17135435182334724,
+          "01|23": 0.03079197018074922,
+          "012|3": 0.03688076324498208
+        },
+        "confusion": [
+          [
+            1612,
+            371,
+            0,
+            22
+          ],
+          [
+            868,
+            340,
+            0,
+            25
+          ],
+          [
+            478,
+            303,
+            0,
+            27
+          ],
+          [
+            164,
+            197,
+            0,
+            16
+          ]
+        ],
+        "gradeDistribution": [
+          3122,
+          1211,
+          0,
+          90
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.3348406059235813
+      },
+      "ranking": {
+        "kendallTau": 0.8552188552188552,
+        "spearmanRho": 0.9669421487603306,
+        "fullTrecKendallTau": 0.8451178451178452,
+        "fullTrecSpearmanRho": 0.9633001820983331
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2531,
+        "WatS-LLM-Rerank": 0.3025,
+        "agg-cocondenser": 0.3736,
+        "bm25_splades": 0.3851,
+        "cip_run_1": 0.5281,
+        "cip_run_2": 0.5281,
+        "cip_run_3": 0.5013,
+        "cip_run_4": 0.4804,
+        "cip_run_5": 0.4849,
+        "cip_run_6": 0.5035,
+        "cip_run_7": 0.4902,
+        "naverloo-frgpt4": 0.5257,
+        "naverloo-rgpt4": 0.5314,
+        "naverloo_bm25_RR": 0.4253,
+        "naverloo_bm25_splades_RR": 0.4773,
+        "naverloo_fs": 0.4031,
+        "naverloo_fs_RR": 0.491,
+        "naverloo_fs_RR_duo": 0.5301,
+        "slim-pp-0shot-uw": 0.3913,
+        "splade_pp_ensemble_distil": 0.4083,
+        "splade_pp_self_distil": 0.4007,
+        "uogtr_b_grf_e": 0.3932,
+        "uogtr_b_grf_e_gb": 0.4185,
+        "uogtr_be": 0.3943,
+        "uogtr_be_gb": 0.4338,
+        "uogtr_dph": 0.2586,
+        "uogtr_dph_bo1": 0.2321,
+        "uogtr_qr_be": 0.4028,
+        "uogtr_qr_be_gb": 0.4236,
+        "uogtr_s": 0.4091,
+        "uogtr_se": 0.4694,
+        "uogtr_se_gb": 0.4687,
+        "uot-yahoo_LLMs-blender": 0.2303,
+        "uot-yahoo_rankgpt35": 0.2592,
+        "uot-yahoo_rankgpt4": 0.2969
+      }
+    },
+    "TREMA-sumdecompose": {
+      "labels": {
+        "kappa": 0.20884347071761325,
+        "nominalAlpha": 0.18836923340507516,
+        "binaryKappa": {
+          "0|123": 0.32280401520016694,
+          "01|23": 0.3512136477468143,
+          "012|3": 0.20467884987625784
+        },
+        "confusion": [
+          [
+            1503,
+            73,
+            273,
+            156
+          ],
+          [
+            707,
+            89,
+            284,
+            153
+          ],
+          [
+            241,
+            73,
+            342,
+            152
+          ],
+          [
+            67,
+            19,
+            150,
+            141
+          ]
+        ],
+        "gradeDistribution": [
+          2518,
+          254,
+          1049,
+          602
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.9400859145376441
+      },
+      "ranking": {
+        "kendallTau": 0.9386042007596855,
+        "spearmanRho": 0.9904054930093488,
+        "fullTrecKendallTau": 0.9015983003713108,
+        "fullTrecSpearmanRho": 0.9814412798071711
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3844,
+        "WatS-LLM-Rerank": 0.5307,
+        "agg-cocondenser": 0.5353,
+        "bm25_splades": 0.5674,
+        "cip_run_1": 0.7576,
+        "cip_run_2": 0.757,
+        "cip_run_3": 0.755,
+        "cip_run_4": 0.7135,
+        "cip_run_5": 0.7437,
+        "cip_run_6": 0.7226,
+        "cip_run_7": 0.7222,
+        "naverloo-frgpt4": 0.7686,
+        "naverloo-rgpt4": 0.7832,
+        "naverloo_bm25_RR": 0.6271,
+        "naverloo_bm25_splades_RR": 0.6937,
+        "naverloo_fs": 0.6041,
+        "naverloo_fs_RR": 0.7114,
+        "naverloo_fs_RR_duo": 0.7656,
+        "slim-pp-0shot-uw": 0.6001,
+        "splade_pp_ensemble_distil": 0.5355,
+        "splade_pp_self_distil": 0.5553,
+        "uogtr_b_grf_e": 0.6057,
+        "uogtr_b_grf_e_gb": 0.6245,
+        "uogtr_be": 0.5871,
+        "uogtr_be_gb": 0.6204,
+        "uogtr_dph": 0.3823,
+        "uogtr_dph_bo1": 0.3237,
+        "uogtr_qr_be": 0.6215,
+        "uogtr_qr_be_gb": 0.637,
+        "uogtr_s": 0.5341,
+        "uogtr_se": 0.6529,
+        "uogtr_se_gb": 0.658,
+        "uot-yahoo_LLMs-blender": 0.3947,
+        "uot-yahoo_rankgpt35": 0.4544,
+        "uot-yahoo_rankgpt4": 0.4881
+      }
+    },
+    "h2oloo-fewself": {
+      "labels": {
+        "kappa": 0.27743420616147163,
+        "nominalAlpha": 0.2689081791654121,
+        "binaryKappa": {
+          "0|123": 0.4171685009190223,
+          "01|23": 0.42799892823511926,
+          "012|3": 0.3048117461200135
+        },
+        "confusion": [
+          [
+            1586,
+            229,
+            98,
+            92
+          ],
+          [
+            602,
+            302,
+            183,
+            146
+          ],
+          [
+            225,
+            143,
+            212,
+            228
+          ],
+          [
+            57,
+            58,
+            64,
+            198
+          ]
+        ],
+        "gradeDistribution": [
+          2470,
+          732,
+          557,
+          664
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.8677368302057427
+      },
+      "ranking": {
+        "kendallTau": 0.9217833369467879,
+        "spearmanRho": 0.9870439130585322,
+        "fullTrecKendallTau": 0.9049624731338903,
+        "fullTrecSpearmanRho": 0.9817214114697392
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3058,
+        "WatS-LLM-Rerank": 0.4427,
+        "agg-cocondenser": 0.5253,
+        "bm25_splades": 0.5236,
+        "cip_run_1": 0.7656,
+        "cip_run_2": 0.7678,
+        "cip_run_3": 0.7348,
+        "cip_run_4": 0.696,
+        "cip_run_5": 0.7109,
+        "cip_run_6": 0.7277,
+        "cip_run_7": 0.7122,
+        "naverloo-frgpt4": 0.8064,
+        "naverloo-rgpt4": 0.8066,
+        "naverloo_bm25_RR": 0.6147,
+        "naverloo_bm25_splades_RR": 0.7054,
+        "naverloo_fs": 0.5724,
+        "naverloo_fs_RR": 0.7312,
+        "naverloo_fs_RR_duo": 0.8052,
+        "slim-pp-0shot-uw": 0.5607,
+        "splade_pp_ensemble_distil": 0.5232,
+        "splade_pp_self_distil": 0.5288,
+        "uogtr_b_grf_e": 0.5877,
+        "uogtr_b_grf_e_gb": 0.6127,
+        "uogtr_be": 0.5775,
+        "uogtr_be_gb": 0.6195,
+        "uogtr_dph": 0.2969,
+        "uogtr_dph_bo1": 0.2383,
+        "uogtr_qr_be": 0.5872,
+        "uogtr_qr_be_gb": 0.6296,
+        "uogtr_s": 0.5276,
+        "uogtr_se": 0.6339,
+        "uogtr_se_gb": 0.6379,
+        "uot-yahoo_LLMs-blender": 0.3067,
+        "uot-yahoo_rankgpt35": 0.367,
+        "uot-yahoo_rankgpt4": 0.4322
+      }
+    },
+    "h2oloo-zeroshot1": {
+      "labels": {
+        "kappa": 0.2817186667123342,
+        "nominalAlpha": 0.2792248140124607,
+        "binaryKappa": {
+          "0|123": 0.4093619206041034,
+          "01|23": 0.3900657106323932,
+          "012|3": 0.30841904365785006
+        },
+        "confusion": [
+          [
+            1522,
+            373,
+            85,
+            25
+          ],
+          [
+            576,
+            456,
+            160,
+            41
+          ],
+          [
+            199,
+            276,
+            262,
+            71
+          ],
+          [
+            56,
+            120,
+            90,
+            111
+          ]
+        ],
+        "gradeDistribution": [
+          2353,
+          1225,
+          597,
+          248
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.7151254804431382
+      },
+      "ranking": {
+        "kendallTau": 0.9351309131468043,
+        "spearmanRho": 0.9884429526242642,
+        "fullTrecKendallTau": 0.8980626607337778,
+        "fullTrecSpearmanRho": 0.9811585090958541
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3153,
+        "WatS-LLM-Rerank": 0.4275,
+        "agg-cocondenser": 0.5054,
+        "bm25_splades": 0.5264,
+        "cip_run_1": 0.7537,
+        "cip_run_2": 0.7537,
+        "cip_run_3": 0.7204,
+        "cip_run_4": 0.6929,
+        "cip_run_5": 0.6885,
+        "cip_run_6": 0.7196,
+        "cip_run_7": 0.6986,
+        "naverloo-frgpt4": 0.7787,
+        "naverloo-rgpt4": 0.7836,
+        "naverloo_bm25_RR": 0.6071,
+        "naverloo_bm25_splades_RR": 0.6894,
+        "naverloo_fs": 0.5684,
+        "naverloo_fs_RR": 0.7178,
+        "naverloo_fs_RR_duo": 0.773,
+        "slim-pp-0shot-uw": 0.5454,
+        "splade_pp_ensemble_distil": 0.5129,
+        "splade_pp_self_distil": 0.5379,
+        "uogtr_b_grf_e": 0.5513,
+        "uogtr_b_grf_e_gb": 0.5924,
+        "uogtr_be": 0.557,
+        "uogtr_be_gb": 0.5978,
+        "uogtr_dph": 0.3012,
+        "uogtr_dph_bo1": 0.2426,
+        "uogtr_qr_be": 0.5634,
+        "uogtr_qr_be_gb": 0.6071,
+        "uogtr_s": 0.5168,
+        "uogtr_se": 0.6099,
+        "uogtr_se_gb": 0.6124,
+        "uot-yahoo_LLMs-blender": 0.3017,
+        "uot-yahoo_rankgpt35": 0.3608,
+        "uot-yahoo_rankgpt4": 0.4136
+      }
+    },
+    "h2oloo-zeroshot2": {
+      "labels": {
+        "kappa": 0.2589269983578159,
+        "nominalAlpha": 0.2408342119044744,
+        "binaryKappa": {
+          "0|123": 0.3690883778411417,
+          "01|23": 0.3277667977303257,
+          "012|3": 0.2788775997560159
+        },
+        "confusion": [
+          [
+            1744,
+            155,
+            74,
+            31,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            729,
+            324,
+            134,
+            46,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            326,
+            214,
+            194,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            121,
+            78,
+            74,
+            104,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "gradeDistribution": [
+          2920,
+          771,
+          476,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "labelsOutside0to3": 1,
+        "averageGrade": 0.5647750395659055
+      },
+      "ranking": {
+        "kendallTau": 0.8703703703703703,
+        "spearmanRho": 0.9725451743941729,
+        "fullTrecKendallTau": 0.8468013468013468,
+        "fullTrecSpearmanRho": 0.9665219218377924
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2726,
+        "WatS-LLM-Rerank": 0.3633,
+        "agg-cocondenser": 0.4449,
+        "bm25_splades": 0.4191,
+        "cip_run_1": 0.6519,
+        "cip_run_2": 0.6518,
+        "cip_run_3": 0.6001,
+        "cip_run_4": 0.5804,
+        "cip_run_5": 0.5871,
+        "cip_run_6": 0.5806,
+        "cip_run_7": 0.5825,
+        "naverloo-frgpt4": 0.6647,
+        "naverloo-rgpt4": 0.671,
+        "naverloo_bm25_RR": 0.527,
+        "naverloo_bm25_splades_RR": 0.6058,
+        "naverloo_fs": 0.4621,
+        "naverloo_fs_RR": 0.6201,
+        "naverloo_fs_RR_duo": 0.6534,
+        "slim-pp-0shot-uw": 0.4871,
+        "splade_pp_ensemble_distil": 0.4201,
+        "splade_pp_self_distil": 0.4291,
+        "uogtr_b_grf_e": 0.4725,
+        "uogtr_b_grf_e_gb": 0.506,
+        "uogtr_be": 0.4745,
+        "uogtr_be_gb": 0.5172,
+        "uogtr_dph": 0.2339,
+        "uogtr_dph_bo1": 0.1922,
+        "uogtr_qr_be": 0.4735,
+        "uogtr_qr_be_gb": 0.5195,
+        "uogtr_s": 0.4216,
+        "uogtr_se": 0.5224,
+        "uogtr_se_gb": 0.5224,
+        "uot-yahoo_LLMs-blender": 0.2627,
+        "uot-yahoo_rankgpt35": 0.3002,
+        "uot-yahoo_rankgpt4": 0.3474
+      }
+    },
+    "prophet-setting1": {
+      "labels": {
+        "kappa": 0.18229868997736845,
+        "nominalAlpha": 0.1758683737215211,
+        "binaryKappa": {
+          "0|123": 0.3501560573045211,
+          "01|23": 0.2902720412133179,
+          "012|3": 0.16772057145436353
+        },
+        "confusion": [
+          [
+            1528,
+            284,
+            116,
+            77
+          ],
+          [
+            657,
+            255,
+            208,
+            113
+          ],
+          [
+            240,
+            267,
+            182,
+            119
+          ],
+          [
+            81,
+            79,
+            123,
+            94
+          ]
+        ],
+        "gradeDistribution": [
+          2506,
+          885,
+          629,
+          403
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.7578566583766674
+      },
+      "ranking": {
+        "kendallTau": 0.9184191641842084,
+        "spearmanRho": 0.9873240447211002,
+        "fullTrecKendallTau": 0.8881416093209927,
+        "fullTrecSpearmanRho": 0.9803207531568989
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2411,
+        "WatS-LLM-Rerank": 0.3607,
+        "agg-cocondenser": 0.4597,
+        "bm25_splades": 0.4626,
+        "cip_run_1": 0.6572,
+        "cip_run_2": 0.6576,
+        "cip_run_3": 0.6312,
+        "cip_run_4": 0.6179,
+        "cip_run_5": 0.6093,
+        "cip_run_6": 0.6429,
+        "cip_run_7": 0.6144,
+        "naverloo-frgpt4": 0.6863,
+        "naverloo-rgpt4": 0.6761,
+        "naverloo_bm25_RR": 0.5067,
+        "naverloo_bm25_splades_RR": 0.613,
+        "naverloo_fs": 0.493,
+        "naverloo_fs_RR": 0.6313,
+        "naverloo_fs_RR_duo": 0.6839,
+        "slim-pp-0shot-uw": 0.4721,
+        "splade_pp_ensemble_distil": 0.4534,
+        "splade_pp_self_distil": 0.471,
+        "uogtr_b_grf_e": 0.4927,
+        "uogtr_b_grf_e_gb": 0.519,
+        "uogtr_be": 0.4909,
+        "uogtr_be_gb": 0.5242,
+        "uogtr_dph": 0.2389,
+        "uogtr_dph_bo1": 0.1977,
+        "uogtr_qr_be": 0.4845,
+        "uogtr_qr_be_gb": 0.5331,
+        "uogtr_s": 0.4561,
+        "uogtr_se": 0.5537,
+        "uogtr_se_gb": 0.5548,
+        "uot-yahoo_LLMs-blender": 0.2537,
+        "uot-yahoo_rankgpt35": 0.2952,
+        "uot-yahoo_rankgpt4": 0.3272
+      }
+    },
+    "prophet-setting2": {
+      "labels": {
+        "kappa": 0.1757445897567502,
+        "nominalAlpha": 0.15666398987968344,
+        "binaryKappa": {
+          "0|123": 0.31021428910582965,
+          "01|23": 0.23815865902052424,
+          "012|3": 0.028386374725119234
+        },
+        "confusion": [
+          [
+            1669,
+            208,
+            125,
+            3
+          ],
+          [
+            740,
+            310,
+            180,
+            3
+          ],
+          [
+            399,
+            234,
+            171,
+            4
+          ],
+          [
+            95,
+            100,
+            175,
+            7
+          ]
+        ],
+        "gradeDistribution": [
+          2903,
+          852,
+          651,
+          17
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.49853040922450825
+      },
+      "ranking": {
+        "kendallTau": 0.9587892373351626,
+        "spearmanRho": 0.9937670729601654,
+        "fullTrecKendallTau": 0.9285116824719469,
+        "fullTrecSpearmanRho": 0.9873240447211002
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3079,
+        "WatS-LLM-Rerank": 0.3973,
+        "agg-cocondenser": 0.4758,
+        "bm25_splades": 0.5144,
+        "cip_run_1": 0.704,
+        "cip_run_2": 0.7032,
+        "cip_run_3": 0.6881,
+        "cip_run_4": 0.6666,
+        "cip_run_5": 0.6732,
+        "cip_run_6": 0.6845,
+        "cip_run_7": 0.6688,
+        "naverloo-frgpt4": 0.7319,
+        "naverloo-rgpt4": 0.7349,
+        "naverloo_bm25_RR": 0.584,
+        "naverloo_bm25_splades_RR": 0.6619,
+        "naverloo_fs": 0.5637,
+        "naverloo_fs_RR": 0.6704,
+        "naverloo_fs_RR_duo": 0.7198,
+        "slim-pp-0shot-uw": 0.5636,
+        "splade_pp_ensemble_distil": 0.4981,
+        "splade_pp_self_distil": 0.5218,
+        "uogtr_b_grf_e": 0.5595,
+        "uogtr_b_grf_e_gb": 0.6107,
+        "uogtr_be": 0.548,
+        "uogtr_be_gb": 0.6011,
+        "uogtr_dph": 0.3005,
+        "uogtr_dph_bo1": 0.2121,
+        "uogtr_qr_be": 0.562,
+        "uogtr_qr_be_gb": 0.6177,
+        "uogtr_s": 0.4984,
+        "uogtr_se": 0.596,
+        "uogtr_se_gb": 0.597,
+        "uot-yahoo_LLMs-blender": 0.2916,
+        "uot-yahoo_rankgpt35": 0.3576,
+        "uot-yahoo_rankgpt4": 0.4195
+      }
+    },
+    "prophet-setting4": {
+      "labels": {
+        "kappa": 0.14711407170502935,
+        "nominalAlpha": 0.09970729535645684,
+        "binaryKappa": {
+          "0|123": 0.23748681424056164,
+          "01|23": 0.14094635315899326,
+          "012|3": 0.03707037535090618
+        },
+        "confusion": [
+          [
+            1798,
+            169,
+            36,
+            2
+          ],
+          [
+            867,
+            277,
+            83,
+            6
+          ],
+          [
+            507,
+            206,
+            92,
+            3
+          ],
+          [
+            187,
+            111,
+            70,
+            9
+          ]
+        ],
+        "gradeDistribution": [
+          3359,
+          763,
+          281,
+          20
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.3131358806240109
+      },
+      "ranking": {
+        "kendallTau": 0.8814132637958337,
+        "spearmanRho": 0.9719168032798574,
+        "fullTrecKendallTau": 0.851135708932618,
+        "fullTrecSpearmanRho": 0.959030746801727
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2378,
+        "WatS-LLM-Rerank": 0.2991,
+        "agg-cocondenser": 0.4393,
+        "bm25_splades": 0.4644,
+        "cip_run_1": 0.5787,
+        "cip_run_2": 0.5808,
+        "cip_run_3": 0.5772,
+        "cip_run_4": 0.5556,
+        "cip_run_5": 0.5828,
+        "cip_run_6": 0.6048,
+        "cip_run_7": 0.5605,
+        "naverloo-frgpt4": 0.6497,
+        "naverloo-rgpt4": 0.6547,
+        "naverloo_bm25_RR": 0.4997,
+        "naverloo_bm25_splades_RR": 0.5893,
+        "naverloo_fs": 0.5062,
+        "naverloo_fs_RR": 0.611,
+        "naverloo_fs_RR_duo": 0.6386,
+        "slim-pp-0shot-uw": 0.4967,
+        "splade_pp_ensemble_distil": 0.4625,
+        "splade_pp_self_distil": 0.4718,
+        "uogtr_b_grf_e": 0.4847,
+        "uogtr_b_grf_e_gb": 0.521,
+        "uogtr_be": 0.4803,
+        "uogtr_be_gb": 0.5169,
+        "uogtr_dph": 0.2502,
+        "uogtr_dph_bo1": 0.1687,
+        "uogtr_qr_be": 0.5015,
+        "uogtr_qr_be_gb": 0.5407,
+        "uogtr_s": 0.463,
+        "uogtr_se": 0.5489,
+        "uogtr_se_gb": 0.5538,
+        "uot-yahoo_LLMs-blender": 0.2251,
+        "uot-yahoo_rankgpt35": 0.2719,
+        "uot-yahoo_rankgpt4": 0.3075
+      }
+    },
+    "willia-umbrela1": {
+      "labels": {
+        "kappa": 0.2862720172192001,
+        "nominalAlpha": 0.2840374462627382,
+        "binaryKappa": {
+          "0|123": 0.41611273667755927,
+          "01|23": 0.3985300848089526,
+          "012|3": 0.31454306228623025
+        },
+        "confusion": [
+          [
+            1521,
+            369,
+            88,
+            27
+          ],
+          [
+            579,
+            457,
+            157,
+            40
+          ],
+          [
+            189,
+            280,
+            270,
+            69
+          ],
+          [
+            46,
+            125,
+            93,
+            113
+          ]
+        ],
+        "gradeDistribution": [
+          2335,
+          1231,
+          608,
+          249
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.722134297987791
+      },
+      "ranking": {
+        "kendallTau": 0.9191919191919192,
+        "spearmanRho": 0.9859924359153943,
+        "fullTrecKendallTau": 0.8956228956228957,
+        "fullTrecSpearmanRho": 0.9806695615632441
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.3111,
+        "WatS-LLM-Rerank": 0.4178,
+        "agg-cocondenser": 0.5122,
+        "bm25_splades": 0.5232,
+        "cip_run_1": 0.7763,
+        "cip_run_2": 0.7763,
+        "cip_run_3": 0.7259,
+        "cip_run_4": 0.6994,
+        "cip_run_5": 0.6955,
+        "cip_run_6": 0.7252,
+        "cip_run_7": 0.7072,
+        "naverloo-frgpt4": 0.794,
+        "naverloo-rgpt4": 0.7891,
+        "naverloo_bm25_RR": 0.6168,
+        "naverloo_bm25_splades_RR": 0.6967,
+        "naverloo_fs": 0.5704,
+        "naverloo_fs_RR": 0.724,
+        "naverloo_fs_RR_duo": 0.791,
+        "slim-pp-0shot-uw": 0.5524,
+        "splade_pp_ensemble_distil": 0.5147,
+        "splade_pp_self_distil": 0.5335,
+        "uogtr_b_grf_e": 0.5556,
+        "uogtr_b_grf_e_gb": 0.5986,
+        "uogtr_be": 0.5608,
+        "uogtr_be_gb": 0.6016,
+        "uogtr_dph": 0.3216,
+        "uogtr_dph_bo1": 0.2552,
+        "uogtr_qr_be": 0.5702,
+        "uogtr_qr_be_gb": 0.6064,
+        "uogtr_s": 0.5182,
+        "uogtr_se": 0.6185,
+        "uogtr_se_gb": 0.6211,
+        "uot-yahoo_LLMs-blender": 0.3114,
+        "uot-yahoo_rankgpt35": 0.3617,
+        "uot-yahoo_rankgpt4": 0.4179
+      }
+    },
+    "willia-umbrela2": {
+      "labels": {
+        "kappa": 0.2687521809714315,
+        "nominalAlpha": 0.25777259840815847,
+        "binaryKappa": {
+          "0|123": 0.41087380624278935,
+          "01|23": 0.34210937514085527,
+          "012|3": 0.3193659656877326
+        },
+        "confusion": [
+          [
+            1690,
+            235,
+            41,
+            39
+          ],
+          [
+            684,
+            382,
+            100,
+            67
+          ],
+          [
+            255,
+            297,
+            157,
+            99
+          ],
+          [
+            76,
+            115,
+            52,
+            134
+          ]
+        ],
+        "gradeDistribution": [
+          2705,
+          1029,
+          350,
+          339
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.620845579923129
+      },
+      "ranking": {
+        "kendallTau": 0.9049624731338903,
+        "spearmanRho": 0.9834022014451475,
+        "fullTrecKendallTau": 0.8746849182706746,
+        "fullTrecSpearmanRho": 0.9763989098809462
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2738,
+        "WatS-LLM-Rerank": 0.4113,
+        "agg-cocondenser": 0.4944,
+        "bm25_splades": 0.4868,
+        "cip_run_1": 0.7566,
+        "cip_run_2": 0.7575,
+        "cip_run_3": 0.7014,
+        "cip_run_4": 0.6839,
+        "cip_run_5": 0.677,
+        "cip_run_6": 0.7001,
+        "cip_run_7": 0.6912,
+        "naverloo-frgpt4": 0.7647,
+        "naverloo-rgpt4": 0.7614,
+        "naverloo_bm25_RR": 0.5938,
+        "naverloo_bm25_splades_RR": 0.6703,
+        "naverloo_fs": 0.5148,
+        "naverloo_fs_RR": 0.6916,
+        "naverloo_fs_RR_duo": 0.7579,
+        "slim-pp-0shot-uw": 0.5149,
+        "splade_pp_ensemble_distil": 0.471,
+        "splade_pp_self_distil": 0.4946,
+        "uogtr_b_grf_e": 0.5011,
+        "uogtr_b_grf_e_gb": 0.5396,
+        "uogtr_be": 0.4973,
+        "uogtr_be_gb": 0.5389,
+        "uogtr_dph": 0.2727,
+        "uogtr_dph_bo1": 0.2172,
+        "uogtr_qr_be": 0.5071,
+        "uogtr_qr_be_gb": 0.5405,
+        "uogtr_s": 0.4724,
+        "uogtr_se": 0.5615,
+        "uogtr_se_gb": 0.563,
+        "uot-yahoo_LLMs-blender": 0.2757,
+        "uot-yahoo_rankgpt35": 0.335,
+        "uot-yahoo_rankgpt4": 0.3976
+      }
+    },
+    "willia-umbrela3": {
+      "labels": {
+        "kappa": 0.2741436144544114,
+        "nominalAlpha": 0.26402108711149885,
+        "binaryKappa": {
+          "0|123": 0.4114384753906069,
+          "01|23": 0.34465374721845526,
+          "012|3": 0.32149126935331734
+        },
+        "confusion": [
+          [
+            1693,
+            237,
+            51,
+            24
+          ],
+          [
+            684,
+            390,
+            125,
+            34
+          ],
+          [
+            256,
+            299,
+            195,
+            58
+          ],
+          [
+            77,
+            115,
+            75,
+            110
+          ]
+        ],
+        "gradeDistribution": [
+          2710,
+          1041,
+          446,
+          226
+        ],
+        "labelsOutside0to3": 0,
+        "averageGrade": 0.5903233099706082
+      },
+      "ranking": {
+        "kendallTau": 0.8956228956228957,
+        "spearmanRho": 0.9809497128449363,
+        "fullTrecKendallTau": 0.8653198653198653,
+        "fullTrecSpearmanRho": 0.9739459308026335
+      },
+      "systemScores": {
+        "WatS-Augmented-BM25": 0.2771,
+        "WatS-LLM-Rerank": 0.4064,
+        "agg-cocondenser": 0.4889,
+        "bm25_splades": 0.4867,
+        "cip_run_1": 0.7526,
+        "cip_run_2": 0.7526,
+        "cip_run_3": 0.6965,
+        "cip_run_4": 0.6747,
+        "cip_run_5": 0.6699,
+        "cip_run_6": 0.6953,
+        "cip_run_7": 0.6876,
+        "naverloo-frgpt4": 0.7572,
+        "naverloo-rgpt4": 0.7508,
+        "naverloo_bm25_RR": 0.5952,
+        "naverloo_bm25_splades_RR": 0.6695,
+        "naverloo_fs": 0.5142,
+        "naverloo_fs_RR": 0.6918,
+        "naverloo_fs_RR_duo": 0.7491,
+        "slim-pp-0shot-uw": 0.5108,
+        "splade_pp_ensemble_distil": 0.4685,
+        "splade_pp_self_distil": 0.4932,
+        "uogtr_b_grf_e": 0.5007,
+        "uogtr_b_grf_e_gb": 0.5399,
+        "uogtr_be": 0.4972,
+        "uogtr_be_gb": 0.541,
+        "uogtr_dph": 0.271,
+        "uogtr_dph_bo1": 0.2141,
+        "uogtr_qr_be": 0.5046,
+        "uogtr_qr_be_gb": 0.5429,
+        "uogtr_s": 0.47,
+        "uogtr_se": 0.5622,
+        "uogtr_se_gb": 0.5647,
+        "uot-yahoo_LLMs-blender": 0.276,
+        "uot-yahoo_rankgpt35": 0.3298,
+        "uot-yahoo_rankgpt4": 0.3895
+      }
+    }
+  },
+  "usage": {
+    "inputTokens": 11484579,
+    "outputTokens": 1250402,
+    "estimatedUsd": 0.48235231800000006,
+    "latencyP50Seconds": 0.2261105420000022,
+    "latencyP95Seconds": 0.27716482300000644,
+    "truncatedPairs": 44,
+    "passageCaps": {
+      "0": 11642,
+      "30000": 3,
+      "60000": 41
+    }
+  }
+}

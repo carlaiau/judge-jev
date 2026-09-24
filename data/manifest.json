@@ -1,0 +1,394 @@
+{
+  "sources": {
+    "llm4eval/LLMJudge": "81159c68260d383f8da1dad8a14f6d914a9054a9",
+    "llm4eval/LLMJudge-benchmark": "0e2024814e3192cfc662ecee56dbd16b2536a7de",
+    "rahmanidashti/SyntheticTestCollections": "bb108f587d08425d8e66108beb663d297039117e"
+  },
+  "files": {
+    "llm4eval/LLMJudge-benchmark/llmjudge/qrels/llmjudge_test_qrel_ids.txt": {
+      "sha256": "c5346bcd079838956830a2325f5f049a62f404f5dffe84270f12b67ea7de4174",
+      "gitBlobSha": "9005e0efa5ca47956e51f9273cf8d9408f357c7b",
+      "bytes": 180749
+    },
+    "llm4eval/LLMJudge-benchmark/llmjudge/qrels/llmjudge_test_qrel_idx.txt": {
+      "sha256": "3a2169a62cecf8725acf402be3222f53399fd5b3467f9f734aa3b2bbd583426c",
+      "gitBlobSha": "93e7e919a0f8ce0a0c5c2d92be3773b85ccf8bf4",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/h2oloo-fewself.txt": {
+      "sha256": "f27b162c1c0c911404b1fdbfff474e9ebadd8bc44267bd77adfcf0cc7d3f7aee",
+      "gitBlobSha": "2cdc26456c4e244edd8f4f861fec73f01ad31340",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/h2oloo-zeroshot1.txt": {
+      "sha256": "f817c0dddee9978133d217eebdefaf3bc6005e7366504767eb8323d5c8ad4a0d",
+      "gitBlobSha": "60ef36b76274298ca72eb5e564472770607f6989",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/h2oloo-zeroshot2.txt": {
+      "sha256": "13ddbdde8cd34eea8084508b6187404d5450b81e53ad9b04c1ec57add3857c5d",
+      "gitBlobSha": "c2dbf3692304a0e0641ca6935f2ef6311c3447fb",
+      "bytes": 61296
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-instruct0.txt": {
+      "sha256": "e4b1d4dc953bed2aa510a111bb221d4c70864778f665b3b26b879f9dae8d8658",
+      "gitBlobSha": "9aa87e6ff9c3edb696e067f333a0c034d443dd13",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-instruct1.txt": {
+      "sha256": "c91ea0ea23c487586d2f25f1cda6f3712ab50c816d06183f424b37cf528809ea",
+      "gitBlobSha": "e765fa38bcec4cace600d0eca8b64ec24c52a94d",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-instruct2.txt": {
+      "sha256": "3e89a906a47146ec60977e0c27914dd40ba7b06fb8ecba66a1ea2130d06e3eb9",
+      "gitBlobSha": "3a4d9105fda9662f97be57277ee26a278f65823e",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-reason0.txt": {
+      "sha256": "af1589779da78d74c885d40e78ff2341744c715732ce5e75064c8ce29f68ac44",
+      "gitBlobSha": "ea4eca1c8fe7db747d26a9ae5d608f0e03a58d6e",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-reason1.txt": {
+      "sha256": "5fe00dd7c60a6e461ba693091d70a2f98763127780459a53227cb5ec873d4bb8",
+      "gitBlobSha": "214d154837cce5185e09b65e53173ff1656f94b8",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/NISTRetrieval-reason2.txt": {
+      "sha256": "91ea013a107602a070e70f43fd78ab5b3d6a4f7f739db16acaf966c96b97124d",
+      "gitBlobSha": "67c5d3746201bb349d8393a526b69d8715334bd9",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/Olz-exp.txt": {
+      "sha256": "b5d5fa761890960b5290f0a3dfe72dcf877432612c32602a25a3993e6bfb55ff",
+      "gitBlobSha": "4def72bba26011f8407f23b9ccfe8ddf0b58d78d",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/Olz-gpt4o.txt": {
+      "sha256": "e65ddf334d30d653a1421824eed4fa931a04afd709fddba49a1efbbc41d0973e",
+      "gitBlobSha": "2aab0494b34b0effcee6cdc09cd24cc693b49ff1",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/Olz-halfbin.txt": {
+      "sha256": "596ac538c3ec71c5bcb88c2c954dc3c5842751168a5a9f532d4ec1bf2e3d51e6",
+      "gitBlobSha": "eee582dc35d7d5b406e2fd053684adfd676572e4",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/Olz-multiprompt.txt": {
+      "sha256": "05241b47beaffac37c10b30d2c51fed04a27992243e2bda711e06157e338bac9",
+      "gitBlobSha": "d6308641ffbf2eef53423448ad43a9f667d4d296",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/Olz-somebin.txt": {
+      "sha256": "751e6d77f8995d14d9383afe88b06076690660c72e42df16ca7ea755c32d0fb5",
+      "gitBlobSha": "68ff44d684a617db5c90eb6b95cfb7785a40a44e",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/prophet-setting1.txt": {
+      "sha256": "924d7adf598e7882363349cda31e64f4d43e9142c9625380e428466b34a72f88",
+      "gitBlobSha": "5932f347924fee08c5d4c420c80f71ba5d1167b4",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/prophet-setting2.txt": {
+      "sha256": "c38c59b6388122616be4a8c8fa875bede6cd12ad01396bb1164170bf96a1de63",
+      "gitBlobSha": "de2a4edd324283c6898f543ba00ea801368bd796",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/prophet-setting4.txt": {
+      "sha256": "ae60a7bcd09c35bf6bf703d5f63c750726ac7be06f10d85a46f454c1575eab22",
+      "gitBlobSha": "a1fd08ada0a5fcf99feb3287dd4905d2abbee8f2",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/RMITIR-GPT4o.txt": {
+      "sha256": "7b2a67e6b6215f84377c5b9b3b622aeae6fff54e03806f7b90caec36379293d6",
+      "gitBlobSha": "e393dc2a5ed525a3a1db224a3dc7133b483b59d3",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/RMITIR-llama38b.txt": {
+      "sha256": "0d36c19426faab14cff71d3179f10f5fd520b10a2944d75b54106d432df024b4",
+      "gitBlobSha": "7c6f0f4d89b0890ce8ca70fc8b7beef895d7a36a",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/RMITIR-llama70B.txt": {
+      "sha256": "305113980beeb1e2b11e7bd8dc28e0ef9e29096280f4c1f675c846e34d8df5fe",
+      "gitBlobSha": "4d6d3979b8b187b68e30db789f6e201ee77ba2e1",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-4prompts.txt": {
+      "sha256": "39ddc0571ea5cb190b184fb7174bf0db87e6bb1148fdf8db21e4d869f2c75664",
+      "gitBlobSha": "169e8bdf320ea9e2979d7e8f1e43e325ba6b7fa7",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-all.txt": {
+      "sha256": "519d4eb5f3609551641010d0eafe0daf0cf35431de20a156b98749007db57d00",
+      "gitBlobSha": "e9cab80c0fb42e186897c9e086ee12024d8d9265",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-CoT.txt": {
+      "sha256": "fa2be73efd8d936cabaeb40bda714c58063c37ec672c8e7a3ff2ed134ff55dad",
+      "gitBlobSha": "ac930ef39fdc71f61cc3a33de2ad2d5b7b568c6e",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-direct.txt": {
+      "sha256": "7ee6f75094018b43aa2251318eb29ec7d4e38b624e8a48bccf696defcdfab978",
+      "gitBlobSha": "534a1f2ed2aec36f3d4632b0a3955fddfb53962d",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-naiveBdecompose.txt": {
+      "sha256": "9428446bedb23ed8c502b00dc27575bad067d35e5f863f346dc673339c6b304d",
+      "gitBlobSha": "abac7d25643831ec2e4f83bdde8408a5a1aff489",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-nuggets.txt": {
+      "sha256": "15d3dc47731d521206fd35be49b389bb311698c929bcb2dfa9bc41ba27b1544b",
+      "gitBlobSha": "71913fd02ed0806ca7976ad8a779617a441d25ea",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-other.txt": {
+      "sha256": "e779bf5ffcb8ae61d4052c870f9b713e77db45cf5300f897b27b3715eab883ab",
+      "gitBlobSha": "559029574c10a4ac65c379285ed990cdb8ae73c4",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-questions.txt": {
+      "sha256": "1ff7f41d782ba3151332216294fac02cf0d300b623eae1a6bff3d7de11ebb0fc",
+      "gitBlobSha": "c53a4b269759f9db11917f8acbe7bf9dba0fd31a",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-rubric0.txt": {
+      "sha256": "6b0476502a280e43a099a8e3a783b4383017be23a1e13252128f350567116836",
+      "gitBlobSha": "c83ddbfe2a2b82003d219ba929d7671b1ebc4641",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/TREMA-sumdecompose.txt": {
+      "sha256": "d7e8dcb1f07d05404385e382fdabfc5fd46472278cf82d79d6c5d195af5ee320",
+      "gitBlobSha": "e443a362e67b85bde7bbe057017fd1f246848f8b",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/willia-umbrela1.txt": {
+      "sha256": "a7a40aca152a13313b7e39e5356d876f3f7b0d1d8f3ddadc3c4185bde350db01",
+      "gitBlobSha": "4cd3d5f2a9c2a93ecc63d32151dfeb48523f0ee9",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/willia-umbrela2.txt": {
+      "sha256": "008fde13659027484106868ebf58a0768a85e33d12a3a3168f5f11524b4ad2e3",
+      "gitBlobSha": "935497223900404eabc343f00be1d5e2936249e9",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge-benchmark/submissions/scores/willia-umbrela3.txt": {
+      "sha256": "55a1cbfaa702b125bffe76d6e86fccec59f42306d2c0c3fd24e15112db4d2d7c",
+      "gitBlobSha": "929539ea6d121a7c2d608f50a9add8fe48399339",
+      "bytes": 61295
+    },
+    "llm4eval/LLMJudge/data/ids-mapping-files/docid_to_docidx.txt": {
+      "sha256": "067e1d52a402a3d1ba82ccf8a05d3c11e9159d082375299d846a344930a6cb1f",
+      "gitBlobSha": "653156096f932a0837b283fd1725c7a4fccb6aa9",
+      "bytes": 405722
+    },
+    "llm4eval/LLMJudge/data/ids-mapping-files/qid_to_qidx.txt": {
+      "sha256": "e9d460eda0d8a12fd5dc40f85d406d6014ebb37f9aba458841675922599bc16b",
+      "gitBlobSha": "cf7b1df0f0018e1c66efef563704de02b790f2e6",
+      "bytes": 590
+    },
+    "llm4eval/LLMJudge/data/llm4eval_dev_qrel_2024.txt": {
+      "sha256": "5031585e51dc4ec6ecd93badfe47e955c5de475b17fb6925b887834649d22fbd",
+      "gitBlobSha": "fa575f4bfd4629ce6c6a5ee7fbb8b72985c330d2",
+      "bytes": 100476
+    },
+    "llm4eval/LLMJudge/data/llm4eval_document_2024.jsonl": {
+      "sha256": "afcb44b6e012dff565bdafbe78eb594cc43c8163d437698abb17d6cf9571f75c",
+      "gitBlobSha": "756b4a8e5159ce9247e3502dd4155294aef490a2",
+      "bytes": 9430108
+    },
+    "llm4eval/LLMJudge/data/llm4eval_query_2024.txt": {
+      "sha256": "bb36ba8599142ff86e8fbeaebc90d78cbbe2857e08592005dcf190c863ed3628",
+      "gitBlobSha": "a759788d9903977ed3e5271eed8c35da4fff801b",
+      "bytes": 2098
+    },
+    "llm4eval/LLMJudge/data/llm4eval_test_qrel_2024.txt": {
+      "sha256": "9acb5907f6ce58e622e5d6da1321e29312398e4d5198725d72489c70863c9a15",
+      "gitBlobSha": "4ebace113781b9c1b72d516d015d65603558de38",
+      "bytes": 52449
+    },
+    "rahmanidashti/SyntheticTestCollections/2023.qrels.pass.withDupes.txt": {
+      "sha256": "5a98a95d5714b00c5066593719e5eb7ca93dd13588d0facf7f426a4c9d6b19b8",
+      "gitBlobSha": "68bdcf46781b9b1ec8e503b54021c911eb24990c",
+      "bytes": 912450
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/agg-cocondenser": {
+      "sha256": "7aa0857a42bd961dbff59245c91131c9d5c459fe2cb70bd704efd4b071061b6d",
+      "gitBlobSha": "d86c2af65c5948b533c15ab0830dde8f2582bdb1",
+      "bytes": 4806770
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/bm25_splades": {
+      "sha256": "906555af0a9ef1b50b858d79874224454595b7df2b0a5915e2e7ed5ec1cf6576",
+      "gitBlobSha": "2864ad6af4e9282a23d7f24586cc8e8736d3077e",
+      "bytes": 5216698
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_1": {
+      "sha256": "da1853689c9902f306290f6c38a46c830cafc7bcb4ff86c5c8e6ee9ea6d3057a",
+      "gitBlobSha": "3db60bbb5c834dff3c59994a74be962de7039dad",
+      "bytes": 5008649
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_2": {
+      "sha256": "eebbc59099d3ca6c01a5316b5847712b1d3bd14d3083db3cf1772b2a2298d8ae",
+      "gitBlobSha": "fc9e298144cf6c867f25517c5589b7341159d8ad",
+      "bytes": 5008570
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_3": {
+      "sha256": "ce818870c1000eceb851f1cf2c2dc9848dd6eea3356c88249a93af0e754734a4",
+      "gitBlobSha": "f15972138bfd67c6467a923a1bec7b4c117136bf",
+      "bytes": 5008649
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_4": {
+      "sha256": "4e929a7405bda2a09886ce72abd98bffe06d758b7fe69659412f7cdb48a17909",
+      "gitBlobSha": "eca32b0f04bad0a68adcdcdac6d892411f62087c",
+      "bytes": 5177497
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_5": {
+      "sha256": "ae513bdc4a09c213e58348a243c3ad0cf80f1349062f9ab94d127ff490b9287b",
+      "gitBlobSha": "f353e030152414c324ae3429f232f073f31b1645",
+      "bytes": 5177497
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_6": {
+      "sha256": "f0e813fdd8e36052909e66d3a8991b030085dad92ca5557e264c36bc3c0baebb",
+      "gitBlobSha": "1fddf84b7773ab3e230d5b3b61f5b6e18abe602e",
+      "bytes": 5177497
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/cip_run_7": {
+      "sha256": "49640fab903ee90394e2b4b7b03cd30f96445e4cb15aa7fed020738317daa7c8",
+      "gitBlobSha": "42e3df9e226aa022bed994b5752afeea8277d716",
+      "bytes": 5177497
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo_bm25_RR": {
+      "sha256": "f0decacf97e6039caa83364ba0abccf019ea752bdf03fec3cd26b5930b569a05",
+      "gitBlobSha": "3da20db99825defde4f2b34325fad484a5f6bf1f",
+      "bytes": 5468784
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo_bm25_splades_RR": {
+      "sha256": "30ecaf3a91a357fe39cf9d2fc95788a529697c814b47718763b537e6694ab602",
+      "gitBlobSha": "25611b968d1d8de0474349484099ac2fb4fbb3af",
+      "bytes": 6020955
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo_fs": {
+      "sha256": "e1de59df46fae3ee365202678d78b5407bb87ecfc7c85ecb385cdde69df99bce",
+      "gitBlobSha": "8837d8f32c9d1239bfa8a49be9923c0264226a11",
+      "bytes": 5134046
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo_fs_RR": {
+      "sha256": "62aceff1fd429a5a9c5329428c9fa221a2de3b0af6b47c6ebfce94317b663a30",
+      "gitBlobSha": "7ed62a6926c2692cb5133470ec0bc1163d9ecb75",
+      "bytes": 5320654
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo_fs_RR_duo": {
+      "sha256": "7f940a4430abe7515e626cb679c85ca2d8274ebe322a8a89dad79ba26b012c38",
+      "gitBlobSha": "3ac103c6e860e7191af5ab4ff6707e52feae3e44",
+      "bytes": 5639401
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo-frgpt4": {
+      "sha256": "1d09097f9e605a84a979d795f8ab691cdcee177e851eb54e35de271d7bce6ead",
+      "gitBlobSha": "5a7bb9e64e2dc91f397fea472b6a5d828b798c66",
+      "bytes": 5530432
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/naverloo-rgpt4": {
+      "sha256": "043c3f3a2cda45362cfba1f4acce7f4ac8e761c02fb8eec4dca296c27c4ade7f",
+      "gitBlobSha": "eef1e986f34eaab3057352b6431e9b718aaa2cae",
+      "bytes": 5359401
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/slim-pp-0shot-uw": {
+      "sha256": "64d5f83a35be8215a0ab57eb27259a8da60a534f41071252bfb09ec8da8c2dc3",
+      "gitBlobSha": "5dabba749e0e7455710b33766c9cf42ad7a3609b",
+      "bytes": 5023299
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/splade_pp_ensemble_distil": {
+      "sha256": "4fd0c1be731ba5d984d10b9abd07cd794e4fdb708057a1ce67541fea16fa1c7c",
+      "gitBlobSha": "1771240a3f0954044aa7bd0f8845b2c0cd5e2b24",
+      "bytes": 5444342
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/splade_pp_self_distil": {
+      "sha256": "a40ee33ebb7123c794818acaf739ce987eb46256ee6e6ed0fa60f52267e53099",
+      "gitBlobSha": "337541c7319264b7f772eef84b6502c263304159",
+      "bytes": 5164279
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_b_grf_e": {
+      "sha256": "8c346735b8af5971f2820cd5c68d1536556e2edc4eba8791166c8bf1b4a8fcdb",
+      "gitBlobSha": "d5bacda30935b49e60eedebfdcdfa868c32940bb",
+      "bytes": 4707112
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_b_grf_e_gb": {
+      "sha256": "0e41fb9827cd85260ebdb121a17befdb0989152cd1114b79c0664c59b9d06f15",
+      "gitBlobSha": "45fb248139464c5e56a3885908629572411f044a",
+      "bytes": 5513016
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_be": {
+      "sha256": "ff2568e3124e8fca5c9a634a20d08839e603fbbbde312dbf03a37ebb1c842cb1",
+      "gitBlobSha": "0d377e5659297f96e7203eb12666a24985a9d8f4",
+      "bytes": 4342258
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_be_gb": {
+      "sha256": "0d78fadfa0c6009e03f41330b1bd88cf062642edd587ecd74b3f06094ac21724",
+      "gitBlobSha": "e3f1f407ca0e15db7f9064cd14f82f1d0d06e030",
+      "bytes": 5163719
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_dph": {
+      "sha256": "5cdf52bdec474453184792c356841e9aca1c7a8f70fed1b271c5403dbec7a949",
+      "gitBlobSha": "df2e1819d5ce9040aff9dedf6f708b72f378a1b2",
+      "bytes": 4367031
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_dph_bo1": {
+      "sha256": "0acc58f415d4a9c3011e29b2166f83ceea6aae37042421e39c7dcf874c5b2cdd",
+      "gitBlobSha": "d047fad6d9ae537e2b01aeb4bc64c598c23ac865",
+      "bytes": 4655047
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_qr_be": {
+      "sha256": "6f72e61fcc4a930d65ee52d47edf5b62fd0be0726b28d616286a4af768b33229",
+      "gitBlobSha": "5ba39a23ee516ee4caf4aa58cadfa6d105144bab",
+      "bytes": 4567929
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_qr_be_gb": {
+      "sha256": "2c89f96eb272fb2539a9d6c37da6c87342f48c39ff1432fcb109d221c516fa48",
+      "gitBlobSha": "4f4399aefd252b304b4cbce4add94d373c40d4ed",
+      "bytes": 5374247
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_s": {
+      "sha256": "ab5380bb352dca445c668364f47f28bda137883759b60cd67cd1f1cac3a6b899",
+      "gitBlobSha": "753b40486ec985abd6612e548afd0e5d46442e0e",
+      "bytes": 4323032
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_se": {
+      "sha256": "ffd27100c1150c34612cc64ffb7fac4297b0551df65368747f4043a97554e518",
+      "gitBlobSha": "1c4976b67abc0201c5b245312933c70ec9e77564",
+      "bytes": 4353580
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uogtr_se_gb": {
+      "sha256": "01ef7c67f391edd8bc2021e8a2794c6ec2281b7381609fc12cdb74c397a4835f",
+      "gitBlobSha": "41c7d0ddc9a9eb4c40c89b3dd37ad846dd3d89b2",
+      "bytes": 5161515
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uot-yahoo_LLMs-blender": {
+      "sha256": "007640998116ef64d58300f1c1c89e0c8ba16983e95b3cfa79d57aac3005e7c2",
+      "gitBlobSha": "d17189dede3d40b84d0a45a5228f6ad009319827",
+      "bytes": 5901334
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uot-yahoo_rankgpt35": {
+      "sha256": "e5b0f37fe40163574a32112e875ad1bdc8ff901bf59dcc8ab0bdf402d8023adb",
+      "gitBlobSha": "f894019235786713829f40cd962731d1a6e7acf1",
+      "bytes": 5691339
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/uot-yahoo_rankgpt4": {
+      "sha256": "10187c067861632176446298cb1c4d080352cc106e4fec46d3c91da108aefc5a",
+      "gitBlobSha": "739632afd2ea7c0bcdda441d2601fdd0b4cfd387",
+      "bytes": 5621338
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/WatS-Augmented-BM25": {
+      "sha256": "295e7a01b2a6aa3204b4cc756006234b5344e62fa6f652d1ed8f2d011eddeed8",
+      "gitBlobSha": "7b69999b0201f9385052f6e88668260e58e6827f",
+      "bytes": 5695439
+    },
+    "rahmanidashti/SyntheticTestCollections/dl-2023-runs/WatS-LLM-Rerank": {
+      "sha256": "4cf8fb6c45066eaf8e290fd8fb95c2e53c227f7a8ec5dc15a4140b1b643435ee",
+      "gitBlobSha": "0bc98fc80fab9527f67c2d26240aa0b510c0c25f",
+      "bytes": 4787898
+    }
+  }
+}

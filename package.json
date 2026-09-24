@@ -1,0 +1,23 @@
+{
+  "name": "judge-jev",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "prepare:data": "node --experimental-strip-types src/cli.ts prepare",
+    "infer": "node --experimental-strip-types src/cli.ts infer",
+    "calibrate": "node --experimental-strip-types src/cli.ts calibrate",
+    "evaluate": "node --experimental-strip-types src/cli.ts evaluate",
+    "status": "node --experimental-strip-types src/cli.ts status",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "questionHash": "223511a5c5fc61351caab8ae01b0091ef16ed90bfc4083371cd501b41ffdde40",
+  "objective": "Maximize unweighted four-grade Cohen kappa on development pairs; ties use closest native thresholds, then lexicographic order",
+  "gridStep": 0.05,
+  "devPairs": 7263,
+  "score": [
+    1.4,
+    2.1,
+    2.25
+  ],
+  "noul": [
+    0.8,
+    0.9,
+    0.5
+  ],
+  "devKappa": {
+    "score": 0.2707502952865349,
+    "noul": 0.30233884486986773
+  }
+}
